@@ -1,0 +1,530 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Điều gì được quy định ở phạm vi điều chỉnh của luật hôn nhân và gia đình",
+        "answer": "Luật này quy định về chế độ hôn nhân và gia đình, chuẩn mực pháp lý cho cách ứng xử giữa các thành viên gia đình, và trách nhiệm của cá nhân, tổ chức, Nhà nước và xã hội trong việc xây dựng, củng cố chế độ hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Phạm vi điều chỉnh của luật hôn nhân và gia đình là gì",
+        "answer": "Luật này quy định chế độ hôn nhân và gia đình; chuẩn mực pháp lý cho cách ứng xử giữa các thành viên gia đình; trách nhiệm của cá nhân, tổ chức, Nhà nước và xã hội trong việc xây dựng, củng cố chế độ hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Nguyên tắc cơ bản nào về hôn nhân và gia đình được quy định?",
+        "answer": "Nguyên tắc cơ bản bao gồm hôn nhân tự nguyện, một vợ một chồng, vợ chồng bình đẳng, tôn trọng giữa các dân tộc, tôn giáo, tín ngưỡng khác nhau, và bảo vệ quyền của công dân Việt Nam và người nước ngoài.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Những yếu tố nào cấu thành chế độ hôn nhân và gia đình?",
+        "answer": "Các yếu tố bao gồm hôn nhân tự nguyện, tiến bộ, một vợ một chồng, vợ chồng bình đẳng, và trách nhiệm của cá nhân, tổ chức, Nhà nước, và xã hội trong việc xây dựng, củng cố chế độ hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Hôn nhân giữa người có tín ngưỡng và người không có tín ngưỡng được quyền lợi gì?",
+        "answer": "Được tôn trọng và được pháp luật bảo vệ theo quy định của luật.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Hôn nhân giữa người có tín ngưỡng và người không có tín ngưỡng có được không?",
+        "answer": "Được, Được tôn trọng và được pháp luật bảo vệ theo quy định của luật.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Hôn nhân giữa công dân Việt Nam thuộc các dân tộc, tôn giáo có quyền lợi gì",
+        "answer": "Được tôn trọng và được pháp luật bảo vệ theo quy định của luật.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Hôn nhân giữa công dân Việt Nam với người nước ngoài như thế nào",
+        "answer": "Được tôn trọng và được pháp luật bảo vệ theo quy định của luật.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Nguyên tắc cơ bản về gia đình?",
+        "answer": "Là xây dựng gia đình ấm no, tiến bộ, hạnh phúc; các thành viên gia đình có nghĩa vụ tôn trọng, quan tâm, chăm sóc, giúp đỡ nhau; không phân biệt đối xử giữa các con.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Gia đình và xã hội có trách nhiệm gì đối với trẻ em, người cao tuổi, và người khuyết tật?",
+        "answer": "Gia đình và xã hội có trách nhiệm bảo vệ, hỗ trợ trẻ em, người cao tuổi, người khuyết tật thực hiện các quyền về hôn nhân và gia đình; giúp đỡ các bà mẹ thực hiện tốt chức năng cao quý của người mẹ; thực hiện kế hoạch hóa gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Những gì cần được kế thừa và phát huy trong chế độ hôn nhân và gia đình?",
+        "answer": "Kế thừa và phát huy truyền thống văn hóa, đạo đức tốt đẹp của dân tộc Việt Nam về hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Hôn nhân được định nghĩa như thế nào?",
+        "answer": "Hôn nhân là quan hệ giữa vợ và chồng sau khi kết hôn.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Gia đình là gì và được xác định như thế nào?",
+        "answer": "Gia đình là tập hợp những người gắn bó với nhau do hôn nhân, quan hệ huyết thống hoặc quan hệ nuôi dưỡng, làm phát sinh các quyền và nghĩa vụ giữa họ với nhau.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Chế độ hôn nhân và gia đình bao gồm những gì?",
+        "answer": "Chế độ hôn nhân và gia đình bao gồm toàn bộ quy định của pháp luật về kết hôn, ly hôn; quyền và nghĩa vụ giữa vợ và chồng, giữa cha mẹ và con, giữa các thành viên khác trong gia đình; cấp dưỡng; xác định cha, mẹ, con; quan hệ hôn nhân và gia đình có yếu tố nước ngoài và những vấn đề khác liên quan.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Tập quán về hôn nhân và gia đình được mô tả như thế nào?",
+        "answer": "Tập quán về hôn nhân và gia đình là quy tắc xử sự có nội dung rõ ràng về quyền, nghĩa vụ của các bên trong quan hệ hôn nhân và gia đình, được lặp đi, lặp lại trong một thời gian dài và được thừa nhận rộng rãi trong một vùng, miền hoặc cộng đồng.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Kết hôn được định nghĩa như thế nào?",
+        "answer": "Kết hôn là việc nam và nữ xác lập quan hệ vợ chồng với nhau theo quy định về điều kiện kết hôn và đăng ký kết hôn.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Kết hôn trái pháp luật là gì?",
+        "answer": "Kết hôn trái pháp luật là việc nam, nữ đã đăng ký kết hôn tại cơ quan nhà nước có thẩm quyền nhưng một bên hoặc cả hai bên vi phạm điều kiện kết hôn theo quy định tại Điều 8.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Kết hôn trái pháp luật có thể xảy ra khi nào?",
+        "answer": "Kết hôn trái pháp luật xảy ra khi nam, nữ đã đăng ký kết hôn tại cơ quan nhà nước nhưng vi phạm điều kiện kết hôn theo quy định tại Điều 8.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Chung sống như vợ chồng là gì?",
+        "answer": "Chung sống như vợ chồng là việc nam, nữ tổ chức cuộc sống chung và coi nhau là vợ chồng.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Tảo hôn là gì?",
+        "answer": "Tảo hôn là việc lấy vợ, lấy chồng khi một bên hoặc cả hai bên chưa đủ tuổi kết hôn theo quy định tại điểm a khoản 1 Điều 8.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Cưỡng ép kết hôn, ly hôn là gì?",
+        "answer": "Cưỡng ép kết hôn, ly hôn là việc đe dọa, uy hiếp tinh thần, hành hạ, ngược đãi, yêu sách của cải hoặc hành vi khác để buộc người khác phải kết hôn hoặc ly hôn trái với ý muốn của họ.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Cản trở kết hôn, ly hôn là gì?",
+        "answer": "Cản trở kết hôn, ly hôn là việc đe dọa, uy hiếp tinh thần, hành hạ, ngược đãi, yêu sách của cải hoặc hành vi khác để ngăn cản việc kết hôn của người có đủ điều kiện kết hôn theo quy định hoặc buộc người khác phải duy trì quan hệ hôn nhân trái với ý muốn của họ.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Kết hôn giả tạo là gì?",
+        "answer": "Kết hôn giả tạo là việc lợi dụng kết hôn để xuất cảnh, nhập cảnh, cư trú, nhập quốc tịch Việt Nam, quốc tịch nước ngoài; hưởng chế độ ưu đãi của Nhà nước hoặc để đạt được mục đích khác mà không nhằm mục đích xây dựng gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Yêu sách của cải trong kết hôn là gì?",
+        "answer": "Yêu sách của cải trong kết hôn là việc đòi hỏi về vật chất một cách quá đáng và coi đó là điều kiện để kết hôn nhằm cản trở việc kết hôn tự nguyện của nam, nữ.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Thời kỳ hôn nhân là thời gian tính từ khi nào đến khi nào?",
+        "answer": "Thời kỳ hôn nhân là khoảng thời gian tồn tại quan hệ vợ chồng, được tính từ ngày đăng ký kết hôn đến ngày chấm dứt hôn nhân.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Ly hôn là gì?",
+        "answer": "Ly hôn là việc chấm dứt quan hệ vợ chồng theo bản án, quyết định có hiệu lực pháp luật của Tòa án.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Ly hôn giả tạo là gì?",
+        "answer": "y hôn giả tạo là việc lợi dụng ly hôn để trốn tránh nghĩa vụ tài sản, vi phạm chính sách, pháp luật về dân số hoặc để đạt được mục đích khác mà không nhằm mục đích chấm dứt hôn nhân.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Thành viên gia đình bao gồm những ai?",
+        "answer": "Thành viên gia đình bao gồm vợ, chồng; cha mẹ đẻ, cha mẹ nuôi, cha dượng, mẹ kế, cha mẹ vợ, cha mẹ chồng; con đẻ, con nuôi, con riêng của vợ hoặc chồng, con dâu, con rể; anh, chị, em cùng cha mẹ, anh, chị, em cùng cha khác mẹ, anh, chị, em cùng mẹ khác cha, anh rể, em rể, chị dâu, em dâu của người cùng cha mẹ hoặc cùng cha khác mẹ, cùng mẹ khác cha; ông bà nội, ông bà ngoại; cháu nội, cháu ngoại; cô, dì, chú, cậu, bác ruột và cháu ruột.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Những người cùng dòng máu về trực hệ là những ai?",
+        "answer": "Những người cùng dòng máu về trực hệ là những người có quan hệ huyết thống, trong đó, người này sinh ra người kia kế tiếp nhau.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Những người có họ trong phạm vi ba đời là ai?",
+        "answer": "Những người có họ trong phạm vi ba đời là những người cùng một gốc sinh ra gồm cha mẹ là đời thứ nhất; anh, chị, em cùng cha mẹ, cùng cha khác mẹ, cùng mẹ khác cha là đời thứ hai; anh, chị, em con chú, con bác, con cô, con cậu, con dì là đời thứ ba.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Người thân thích là ai?",
+        "answer": "Người thân thích là người có quan hệ hôn nhân, nuôi dưỡng, người có cùng dòng máu về trực hệ và người có họ trong phạm vi ba đời.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Nhu cầu thiết yếu là gì?",
+        "answer": "Nhu cầu thiết yếu là nhu cầu sinh hoạt thông thường về ăn, mặc, ở, học tập, khám bệnh, chữa bệnh và nhu cầu sinh hoạt thông thường khác không thể thiếu cho cuộc sống của mỗi người, mỗi gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Kỹ thuật nào được sử dụng trong việc sinh con bằng kỹ thuật hỗ trợ sinh sản?",
+        "answer": "Trong việc sinh con bằng kỹ thuật hỗ trợ sinh sản, sử dụng thụ tinh nhân tạo hoặc thụ tinh trong ống nghiệm.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Mục đích của việc mang thai hộ vì mục đích nhân đạo là gì?",
+        "answer": "Mục đích của việc mang thai hộ vì mục đích nhân đạo là giúp mang thai cho cặp vợ chồng mà người vợ không thể mang thai và sinh con ngay cả khi áp dụng kỹ thuật hỗ trợ sinh sản.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Việc mang thai hộ vì mục đích thương mại là gì?",
+        "answer": "Việc mang thai hộ vì mục đích thương mại là việc một người phụ nữ mang thai cho người khác với mục đích nhận lợi ích về mặt kinh tế hoặc lợi ích khác.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Định nghĩa cấp dưỡng theo quy định của Luật này là gì?",
+        "answer": "Cấp dưỡng là việc một người có nghĩa vụ đóng góp tiền hoặc tài sản khác để đáp ứng nhu cầu thiết yếu của người không sống chung với mình mà có quan hệ hôn nhân, huyết thống hoặc nuôi dưỡng theo quy định của Luật này.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Quan hệ hôn nhân và gia đình có yếu tố nước ngoài là gì?",
+        "answer": "Quan hệ hôn nhân và gia đình có yếu tố nước ngoài là quan hệ hôn nhân và gia đình mà ít nhất một bên tham gia là người nước ngoài, người Việt Nam định cư ở nước ngoài; quan hệ hôn nhân và gia đình giữa các bên tham gia là công dân Việt Nam nhưng căn cứ để xác lập, thay đổi, chấm dứt quan hệ đó theo pháp luật nước ngoài, phát sinh tại nước ngoài hoặc tài sản liên quan đến quan hệ đó ở nước ngoài.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Thời kỳ hôn nhân được tính từ khi nào đến khi nào?",
+        "answer": "Thời kỳ hôn nhân được tính từ ngày đăng ký kết hôn đến ngày chấm dứt hôn nhân.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Có bao nhiêu người được xem là thành viên gia đình?",
+        "answer": "hành viên gia đình bao gồm vợ, chồng; cha mẹ đẻ, cha mẹ nuôi, cha dượng, mẹ kế, cha mẹ vợ, cha mẹ chồng; con đẻ, con nuôi, con riêng của vợ hoặc chồng, con dâu, con rể; anh, chị, em cùng cha mẹ, anh, chị, em cùng cha khác mẹ, anh, chị, em cùng mẹ khác cha, anh rể, em rể, chị dâu, em dâu của người cùng cha mẹ hoặc cùng cha khác mẹ, cùng mẹ khác cha; ông bà nội, ông bà ngoại; cháu nội, cháu ngoại; cô, dì, chú, cậu, bác ruột và cháu ruột.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Điều kiện nào làm việc kết hôn trái pháp luật?",
+        "answer": "Kết hôn trái pháp luật là khi một hoặc cả hai bên vi phạm điều kiện kết hôn theo quy định tại Điều 8 của Luật này khi đã đăng ký kết hôn tại cơ quan nhà nước có thẩm quyền.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Theo pháp luật, Nhà nước có những biện pháp nào để bảo hộ hôn nhân và gia đình ở Việt Nam?",
+        "answer": "Nhà nước có chính sách, biện pháp bảo hộ hôn nhân và gia đình, tạo điều kiện để nam, nữ xác lập hôn nhân tự nguyện, tiến bộ, một vợ một chồng, vợ chồng bình đẳng; xây dựng gia đình ấm no, tiến bộ, hạnh phúc và thực hiện đầy đủ chức năng của mình; tăng cường tuyên truyền, phổ biến, giáo dục pháp luật về hôn nhân và gia đình; vận động nhân dân xóa bỏ phong tục, tập quán lạc hậu về hôn nhân và gia đình, phát huy truyền thống, phong tục, tập quán tốt đẹp thể hiện bản sắc của mỗi dân tộc.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Làm thế nào Chính phủ thống nhất quản lý nhà nước về hôn nhân và gia đình, và ai chịu trách nhiệm thực hiện theo sự phân công của Chính phủ?",
+        "answer": "Chính phủ thống nhất quản lý nhà nước về hôn nhân và gia đình. Các bộ, cơ quan ngang bộ thực hiện quản lý nhà nước về hôn nhân và gia đình theo sự phân công của Chính phủ. Ủy ban nhân dân các cấp và các cơ quan khác thực hiện quản lý nhà nước về hôn nhân và gia đình theo quy định của pháp luật.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Cơ quan, tổ chức nào có trách nhiệm giáo dục và vận động nhân dân xây dựng gia đình văn hóa theo quy định của pháp luật?",
+        "answer": "Cơ quan, tổ chức có trách nhiệm giáo dục, vận động cán bộ, công chức, viên chức, người lao động, các thành viên của mình và mọi công dân xây dựng gia đình văn hóa; kịp thời hòa giải mâu thuẫn trong gia đình, bảo vệ quyền, lợi ích hợp pháp của các thành viên gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Nhà trường cần phối hợp với gia đình như thế nào trong việc giáo dục và tuyên truyền về pháp luật hôn nhân và gia đình cho thế hệ trẻ?",
+        "answer": "Nhà trường phối hợp với gia đình trong việc giáo dục, tuyên truyền, phổ biến pháp luật về hôn nhân và gia đình cho thế hệ trẻ.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Biện pháp nào được đề xuất để vận động nhân dân xóa bỏ phong tục, tập quán lạc hậu về hôn nhân và gia đình theo hướng phát huy truyền thống tốt đẹp của mỗi dân tộc?",
+        "answer": "Đề xuất biện pháp vận động nhân dân xóa bỏ phong tục, tập quán lạc hậu về hôn nhân và gia đình bằng cách phát huy truyền thống, phong tục, tập quán tốt đẹp thể hiện bản sắc của mỗi dân tộc.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Theo Luật, quan hệ hôn nhân và gia đình được thực hiện như thế nào?",
+        "answer": "Quan hệ hôn nhân và gia đình được xác lập và thực hiện theo quy định của Luật này, được tôn trọng và được pháp luật bảo vệ.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Luật cấm những hành vi nào liên quan đến hôn nhân?",
+        "answer": "Luật cấm các hành vi như kết hôn giả tạo, tảo hôn, cưỡng ép kết hôn, lừa dối kết hôn, cản trở kết hôn, và nhiều hành vi khác như được liệt kê trong điều 2.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Quy định nào về việc xử lý hành vi vi phạm pháp luật về hôn nhân và gia đình?",
+        "answer": "Mọi hành vi vi phạm pháp luật về hôn nhân và gia đình phải được xử lý nghiêm minh, đúng pháp luật. Cơ quan, tổ chức, cá nhân có quyền yêu cầu Tòa án, cơ quan khác có thẩm quyền áp dụng biện pháp kịp thời ngăn chặn và xử lý người có hành vi vi phạm pháp luật về hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Quy định nào về bảo vệ danh dự, nhân phẩm, và quyền riêng tư trong quá trình giải quyết vụ việc về hôn nhân và gia đình?",
+        "answer": "Danh dự, nhân phẩm, uy tín, bí mật đời tư và các quyền riêng tư khác của các bên được tôn trọng, bảo vệ trong quá trình giải quyết vụ việc về hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Luật cấm những hành vi nào liên quan đến việc sử dụng quyền về hôn nhân và gia đình để mục đích phi đạo đức?",
+        "answer": "Lợi dụng việc thực hiện quyền về hôn nhân và gia đình để mua bán người, bóc lột sức lao động, xâm phạm tình dục hoặc có hành vi khác nhằm mục đích trục lợi là hành vi bị cấm theo Luật.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Làm thế nào để xử lý hành vi vi phạm pháp luật về hôn nhân và gia đình theo Luật?",
+        "answer": "Mọi hành vi vi phạm pháp luật về hôn nhân và gia đình phải được xử lý nghiêm minh, đúng pháp luật. Cơ quan, tổ chức, cá nhân có quyền yêu cầu Tòa án, cơ quan khác có thẩm quyền áp dụng biện pháp kịp thời ngăn chặn và xử lý người có hành vi vi phạm pháp luật về hôn nhân và gia đình.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Quy định nào áp dụng đối với quan hệ hôn nhân và gia đình khi Luật này không quy định?",
+        "answer": "Các quy định của Bộ luật dân sự và các luật khác có liên quan đến quan hệ hôn nhân và gia đình sẽ được áp dụng trong trường hợp Luật này không quy định (theo Điều 6).",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Luật có quy định gì về việc áp dụng tập quán về hôn nhân và gia đình?",
+        "answer": "Trong trường hợp pháp luật không quy định và các bên không có thỏa thuận, tập quán tốt đẹp thể hiện bản sắc của mỗi dân tộc, không trái với nguyên tắc quy định tại Điều 2 và không vi phạm điều cấm của Luật này sẽ được áp dụng (theo Điều 7).",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Điều 7 nói gì về việc áp dụng tập quán về hôn nhân và gia đình?",
+        "answer": "Theo Điều 7, trong trường hợp pháp luật không quy định và các bên không có thỏa thuận, tập quán tốt đẹp thể hiện bản sắc của mỗi dân tộc, không trái với nguyên tắc quy định tại Điều 2 và không vi phạm điều cấm của Luật này sẽ được áp dụng.",
+        "intent": "CHUONG_1"
+      },
+      {
+        "text": "Nam cần đạt đến tuổi bao nhiêu để kết hôn?",
+        "answer": "Nam cần đủ 20 tuổi trở lên để kết hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Nữ cần đạt đến tuổi bao nhiêu để kết hôn?",
+        "answer": "Nữ cần đủ 18 tuổi trở lên để kết hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Ai có thẩm quyền quyết định việc kết hôn?",
+        "answer": "Việc kết hôn do nam và nữ tự nguyện quyết định.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Điều kiện nào làm cho việc kết hôn trở thành hôn nhân giả tạo?",
+        "answer": "Kết hôn giả tạo xảy ra khi nam hoặc nữ vi phạm điều kiện kết hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Có cấm kết hôn giữa những người nào?",
+        "answer": "Cấm kết hôn giữa người mất năng lực hành vi dân sự.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Nhà nước có thừa nhận hôn nhân giữa những người cùng giới tính không?",
+        "answer": "Không, Nhà nước không thừa nhận hôn nhân giữa những người cùng giới tính.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Việc kết hôn phải được thực hiện như thế nào?",
+        "answer": "Việc kết hôn phải được đăng ký và do cơ quan nhà nước có thẩm quyền thực hiện theo quy định của Luật này và pháp luật về hộ tịch.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Việc kết hôn không được đăng ký sẽ có hiệu quả gì?",
+        "answer": "Nếu việc kết hôn không được đăng ký theo quy định, thì nó không có giá trị pháp lý.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Khi nào vợ chồng đã ly hôn muốn xác lập lại quan hệ vợ chồng, họ phải thực hiện bước gì?",
+        "answer": "Vợ chồng đã ly hôn muốn xác lập lại quan hệ vợ chồng phải đăng ký kết hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Ai là cơ quan có thẩm quyền để đăng ký việc kết hôn?",
+        "answer": "Cơ quan nhà nước có thẩm quyền là cơ quan thực hiện đăng ký việc kết hôn theo quy định của Luật này và pháp luật về hộ tịch.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quy định của luật về hộ tịch là gì liên quan đến việc đăng ký kết hôn?",
+        "answer": "Luật về hộ tịch quy định về việc đăng ký kết hôn và có liên quan đến quy trình thực hiện theo quy định của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Ai có quyền yêu cầu hủy việc kết hôn trái pháp luật?",
+        "answer": "Người bị cưỡng ép kết hôn hoặc bị lừa dối kết hôn, theo quy định của pháp luật về tố tụng dân sự, có quyền tự mình yêu cầu hoặc đề nghị cá nhân, tổ chức quy định tại khoản 2 Điều này yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại điểm b khoản 1 Điều 8 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Ai có quyền yêu cầu hủy việc kết hôn nếu việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này?",
+        "answer": "Cá nhân, cơ quan, tổ chức quy định tại các điểm a, c và d khoản 2 Điều này có quyền theo quy định của pháp luật về tố tụng dân sự, yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Cơ quan quản lý nhà nước về gia đình có quyền gì liên quan đến việc hủy việc kết hôn trái pháp luật?",
+        "answer": "Cơ quan quản lý nhà nước về gia đình có quyền theo quy định của pháp luật về tố tụng dân sự, yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Cơ quan quản lý nhà nước về trẻ em có quyền gì liên quan đến việc hủy việc kết hôn trái pháp luật?",
+        "answer": "Cơ quan quản lý nhà nước về trẻ em có quyền theo quy định của pháp luật về tố tụng dân sự, yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Hội liên hiệp phụ nữ có quyền gì liên quan đến việc hủy việc kết hôn trái pháp luật?",
+        "answer": "Hội liên hiệp phụ nữ có quyền theo quy định của pháp luật về tố tụng dân sự, yêu cầu Tòa án hủy việc kết hôn trái pháp luật do việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Cá nhân, cơ quan, tổ chức khác có quyền gì khi phát hiện việc kết hôn trái pháp luật?",
+        "answer": "Cá nhân, cơ quan, tổ chức khác khi phát hiện việc kết hôn trái pháp luật có quyền đề nghị cơ quan, tổ chức quy định tại các điểm b, c và d khoản 2 Điều này yêu cầu Tòa án hủy việc kết hôn trái pháp luật.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Tòa án thực hiện xử lý việc kết hôn trái pháp luật dựa trên quy định của đâu?",
+        "answer": "Tòa án thực hiện xử lý việc kết hôn trái pháp luật theo quy định tại Luật này và pháp luật về tố tụng dân sự.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Khi cả hai bên kết hôn đều có đủ điều kiện kết hôn theo quy định tại Điều 8 của Luật này và yêu cầu công nhận quan hệ hôn nhân, Tòa án sẽ xác nhận quan hệ hôn nhân từ khi nào?",
+        "answer": "Tòa án sẽ xác nhận quan hệ hôn nhân từ thời điểm các bên đủ điều kiện kết hôn theo quy định của Luật này tại thời điểm Tòa án giải quyết yêu cầu hủy việc kết hôn trái pháp luật.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quyết định của Tòa án về việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân được gửi đến những đối tượng nào?",
+        "answer": "Quyết định của Tòa án phải được gửi cho cơ quan đã đăng ký kết hôn, hai bên kết hôn trái pháp luật, cũng như cá nhân, cơ quan, tổ chức liên quan theo quy định của pháp luật về tố tụng dân sự.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Ai là đơn vị chủ trì phối hợp với Viện kiểm sát nhân dân tối cao và Bộ Tư pháp trong quá trình thực hiện việc xử lý kết hôn trái pháp luật?",
+        "answer": "Tòa án nhân dân tối cao là đơn vị chủ trì phối hợp với Viện kiểm sát nhân dân tối cao và Bộ Tư pháp trong quá trình thực hiện việc xử lý kết hôn trái pháp luật.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Việc xác nhận quan hệ hôn nhân trong trường hợp cả hai bên kết hôn đều có đủ điều kiện được thực hiện như thế nào?",
+        "answer": "Tòa án sẽ xác nhận quan hệ hôn nhân từ thời điểm các bên đủ điều kiện kết hôn theo quy định của Luật này tại thời điểm Tòa án giải quyết yêu cầu hủy việc kết hôn trái pháp luật.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quyết định của Tòa án về việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân có giá trị pháp lý nào?",
+        "answer": "Quyết định của Tòa án về việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân có giá trị pháp lý và phải được thực hiện theo đúng quy định của pháp luật.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Cơ quan nào sẽ nhận quyết định của Tòa án liên quan đến việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân?",
+        "answer": "Quyết định của Tòa án phải được gửi cho cơ quan đã thực hiện việc đăng ký kết hôn để ghi vào sổ hộ tịch.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Bộ Tư pháp có vai trò gì trong quá trình thực hiện Điều 11 của Luật này?",
+        "answer": "Bộ Tư pháp có vai trò hướng dẫn quá trình thực hiện Điều 11 của Luật này, đồng thời phối hợp với Tòa án nhân dân tối cao và Viện kiểm sát nhân dân tối cao.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Hậu quả pháp lý của việc hủy kết hôn trái pháp luật được định rõ như thế nào?",
+        "answer": "Khi việc kết hôn trái pháp luật bị hủy, hai bên kết hôn phải chấm dứt quan hệ như vợ chồng theo quy định của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Làm thế nào quyền, nghĩa vụ của cha, mẹ, con được giải quyết khi việc kết hôn bị hủy?",
+        "answer": "Quyền, nghĩa vụ của cha, mẹ, con khi việc kết hôn bị hủy sẽ được giải quyết theo quy định về quyền, nghĩa vụ của cha, mẹ, con khi ly hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Những vấn đề như quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên sẽ được giải quyết như thế nào khi việc kết hôn bị hủy?",
+        "answer": "Quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên khi việc kết hôn bị hủy sẽ được giải quyết theo quy định tại Điều 16 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 12 của Luật, ai có trách nhiệm giải quyết quan hệ tài sản, nghĩa vụ và hợp đồng khi việc kết hôn bị hủy?",
+        "answer": "Quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên khi việc kết hôn bị hủy sẽ được giải quyết theo quy định tại Điều 16 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Khi việc đăng ký kết hôn không đúng thẩm quyền xảy ra, cơ quan nhà nước có thẩm quyền sẽ thực hiện các biện pháp gì?",
+        "answer": "Trong trường hợp việc đăng ký kết hôn không đúng thẩm quyền, cơ quan nhà nước có thẩm quyền sẽ thu hồi, hủy bỏ giấy chứng nhận kết hôn và yêu cầu hai bên thực hiện lại việc đăng ký kết hôn tại cơ quan nhà nước có thẩm quyền theo quy định của pháp luật về hộ tịch.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quan hệ hôn nhân sẽ được xác lập từ khi nào trong trường hợp đăng ký kết hôn không đúng thẩm quyền?",
+        "answer": "Trong trường hợp việc đăng ký kết hôn không đúng thẩm quyền, quan hệ hôn nhân sẽ được xác lập từ ngày đăng ký kết hôn trước đó.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 13 của Luật, khi có yêu cầu thu hồi, hủy bỏ giấy chứng nhận kết hôn, cơ quan nhà nước có thẩm quyền sẽ đề xuất điều gì cho hai bên?",
+        "answer": "Khi có yêu cầu, cơ quan nhà nước có thẩm quyền sẽ đề xuất hai bên thực hiện lại việc đăng ký kết hôn tại cơ quan nhà nước có thẩm quyền theo quy định của pháp luật về hộ tịch.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 14 của Luật, khi nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn, quyền, nghĩa vụ giữa vợ và chồng có phát sinh không?",
+        "answer": "Không, nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn theo quy định của Luật này không làm phát sinh quyền, nghĩa vụ giữa vợ và chồng.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Trong trường hợp nam, nữ thực hiện đăng ký kết hôn sau khi chung sống với nhau như vợ chồng, quan hệ hôn nhân sẽ được xác lập từ thời điểm nào?",
+        "answer": "Nếu nam, nữ chung sống với nhau như vợ chồng theo quy định tại Điều 14, nhưng sau đó thực hiện việc đăng ký kết hôn theo quy định của pháp luật, thì quan hệ hôn nhân sẽ được xác lập từ thời điểm đăng ký kết hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 14 của Luật, quyền, nghĩa vụ đối với con, tài sản và hợp đồng giữa nam, nữ chung sống như vợ chồng được giải quyết như thế nào?",
+        "answer": "Quyền, nghĩa vụ đối với con, tài sản, nghĩa vụ và hợp đồng giữa nam, nữ chung sống như vợ chồng sẽ được giải quyết theo quy định tại Điều 15 và Điều 16 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn có phải tuân theo các điều kiện kết hôn quy định tại Điều 8 không?",
+        "answer": "Không, nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn không phải tuân theo các điều kiện kết hôn quy định tại Điều 8 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quan hệ hôn nhân có được công nhận nếu nam, nữ thực hiện việc đăng ký kết hôn sau khi chung sống như vợ chồng?",
+        "answer": "Có, nếu nam, nữ chung sống như vợ chồng theo quy định tại Điều 14, nhưng sau đó thực hiện việc đăng ký kết hôn theo quy định của pháp luật, quan hệ hôn nhân sẽ được công nhận từ thời điểm đăng ký kết hôn.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Nam, nữ chung sống như vợ chồng có được công nhận quan hệ hôn nhân theo Điều 14 không?",
+        "answer": "Không, nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn không được công nhận quan hệ hôn nhân theo quy định của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 14 của Luật, việc giải quyết quyền, nghĩa vụ đối với con và tài sản giữa nam, nữ chung sống như vợ chồng được thực hiện theo quy định nào?",
+        "answer": "Việc giải quyết quyền, nghĩa vụ đối với con, tài sản và hợp đồng giữa nam, nữ chung sống như vợ chồng sẽ được thực hiện theo quy định tại Điều 15 và Điều 16 của Luật này.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 15 của Luật, quyền, nghĩa vụ giữa nam, nữ chung sống với nhau như vợ chồng và con được giải quyết theo quy định nào?",
+        "answer": "Quyền, nghĩa vụ giữa nam, nữ chung sống với nhau như vợ chồng và con được giải quyết theo quy định của Luật này về quyền, nghĩa vụ của cha mẹ và con.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 16 của Luật, quan hệ tài sản, nghĩa vụ và hợp đồng của nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn được giải quyết như thế nào?",
+        "answer": "Quan hệ tài sản, nghĩa vụ và hợp đồng của nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn được giải quyết theo thỏa thuận giữa các bên; trong trường hợp không có thỏa thuận thì giải quyết theo quy định của Bộ luật dân sự và các quy định khác của pháp luật có liên quan.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Việc giải quyết quan hệ tài sản trong trường hợp nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn bảo đảm điều gì?",
+        "answer": "Việc giải quyết quan hệ tài sản phải bảo đảm quyền, lợi ích hợp pháp của phụ nữ và con; công việc nội trợ và công việc khác có liên quan để duy trì đời sống chung được coi như lao động có thu nhập.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn có được thỏa thuận giải quyết quan hệ tài sản không?",
+        "answer": "Có, nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn có thể thỏa thuận giải quyết quan hệ tài sản giữa họ.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 16 của Luật, quyền, lợi ích hợp pháp của ai phải được bảo đảm khi giải quyết quan hệ tài sản?",
+        "answer": "Theo Điều 16 của Luật, quyền, lợi ích hợp pháp của phụ nữ và con phải được bảo đảm khi giải quyết quan hệ tài sản.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quan hệ nội trợ và công việc khác liên quan để duy trì đời sống chung của nam, nữ chung sống như vợ chồng được coi như là gì?",
+        "answer": "Quan hệ nội trợ và công việc khác liên quan để duy trì đời sống chung của nam, nữ chung sống như vợ chồng được coi như là lao động có thu nhập.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Theo Điều 15 của Luật, quyền, nghĩa vụ giữa nam, nữ chung sống với nhau như vợ chồng và con được giải quyết theo quy định nào?",
+        "answer": "Quyền, nghĩa vụ giữa nam, nữ chung sống với nhau như vợ chồng và con được giải quyết theo quy định của Luật này về quyền, nghĩa vụ của cha mẹ và con.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Trong trường hợp nam, nữ không có thỏa thuận giải quyết quan hệ tài sản, quy định pháp luật nào sẽ được áp dụng?",
+        "answer": "Trong trường hợp nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn và không có thỏa thuận giải quyết quan hệ tài sản, quy định của Bộ luật dân sự và các quy định khác của pháp luật có liên quan sẽ được áp dụng.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Việc giải quyết quan hệ tài sản của nam, nữ chung sống như vợ chồng thực hiện như thế nào nếu không có thỏa thuận?",
+        "answer": "Nếu không có thỏa thuận giải quyết, việc giải quyết quan hệ tài sản của nam, nữ chung sống như vợ chồng sẽ được thực hiện theo quy định của Bộ luật dân sự và các quy định khác của pháp luật có liên quan.",
+        "intent": "CHUONG_2"
+      },
+      {
+        "text": "Quyền, lợi ích hợp pháp của ai phải được đảm bảo khi giải quyết quan hệ tài sản của nam, nữ chung sống như vợ chồng?",
+        "answer": "Quyền, lợi ích hợp pháp của phụ nữ và con phải được đảm bảo khi giải quyết quan hệ tài sản của nam, nữ chung sống như vợ chồng.",
+        "intent": "CHUONG_2"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}
