@@ -34,7 +34,7 @@ def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.c
     map_index2action = mapping['index2action']
     map_action2index = mapping['action2index']
 
-    map_action2answer = pd.read_csv('chuong1_intent_response.csv')
+    map_action2answer = pd.read_csv('data_chapter04_intent_response.csv')
     num_states = len(map_index2state)
 
 

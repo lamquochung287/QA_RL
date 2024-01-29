@@ -8,16 +8,16 @@ def parameters():
     """ configuration for RL agent """
     
     config = {}
-    config['log_file'] = 'chuong1.csv' #file with conversation
+    config['log_file'] = 'data_chapter04.csv' #file with conversation
     config['nlu'] = 'rasa' #either watson or rasa
-    config['num_episodes_warm'] = 100 # should be similar to number of conversations 
-    config['train_freq_warm'] = 100 # if equal to num_episodes_war --> 1 training epoch, which is enough for warmp-up
-    config['num_episodes'] = 100 # total number of episodes 
+    config['num_episodes_warm'] = 50 # should be similar to number of conversations 
+    config['train_freq_warm'] = 50 # if equal to num_episodes_war --> 1 training epoch, which is enough for warmp-up
+    config['num_episodes'] = 50 # total number of episodes 
     config['train_freq'] =  10 #30 number of episodes per training epochs
     config['epsilon'] = 0.2 #initial
     config['epsilon_f'] = 0.05 #epsilon after epsilon_epoch_f epochs
     config['epsilon_epoch_f'] = 20  
-    config['dqn_hidden_size'] = 60 #paramter of DQN
+    config['dqn_hidden_size'] = 10 #paramter of DQN
     config['gamma'] = 0.9 #paramter of DQN 
     config['prob_no_intent'] = 0.5 #probability of giving 'No intent detected" in random policy
     config['buffer_size'] = 10000 # max size of experience replay buffer 
@@ -27,10 +27,10 @@ def config_score_model():
     """ configuration for score model """
     
     params = {}
-    params['epochs'] = 100
+    params['epochs'] = 50
     params['lr'] = 1.e-4
     params['l2_reg'] = 0.1
-    params['print_freq'] = 100
+    params['print_freq'] = 50
 
     return params
 
@@ -144,7 +144,7 @@ def get_top_intents(df, max_num_intents = 90, remove_fallback=True):
 
     return df_top_intents, count_intent, top_intents
 
-def score_data(file='./chuong1.csv', thre_augm = 0.9):
+def score_data(file='./data_chapter04.csv', thre_augm = 0.9):
     """ Load and transform (embeddings) data to train score model """
     
     ### Prepare Data for training score_model

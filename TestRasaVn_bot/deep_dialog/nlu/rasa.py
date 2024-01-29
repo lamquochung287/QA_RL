@@ -19,7 +19,7 @@ class rasa():
          Return: message, intent, confidence
     """
     
-    def __init__(self, params, top_intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file='./chuong1_Datatraining.json'):
+    def __init__(self, params, top_intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file='./data_chapter04_Datatraining.json'):
         """ Load rasa config from config files and train NLU """
 
         # do first training
@@ -38,7 +38,7 @@ class rasa():
         self.training_dir = os.path.dirname(training_file)
 
         self.training_data = training_data_init
-        self.temp_training_file = self.training_dir + '/chuong1_Datatraining_tmp.json'
+        self.temp_training_file = self.training_dir + '/data_chapter04_Datatraining_tmp.json'
         self.training_file = training_file
         if training_file != self.temp_training_file:
             shutil.copy(training_file, self.temp_training_file)

@@ -5,7 +5,7 @@ import numpy as np
 class evaluate(object):
     """ evaluate RL performances on test set extracted from the full conversations and manually labeled """
     
-    def __init__(self, map_state2index, map_index2action, file='chuong1_test_set.csv'):
+    def __init__(self, map_state2index, map_index2action, file='data_chapter04_test_set.csv'):
         """ read test set """
         
         DF = pd.read_csv(file)
