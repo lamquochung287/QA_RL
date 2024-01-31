@@ -34,7 +34,9 @@ def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.c
     map_index2action = mapping['index2action']
     map_action2index = mapping['action2index']
 
-    map_action2answer = pd.read_csv('data_chapter04_intent_response.csv')
+    # map_action2answer = pd.read_csv('data_chapter04_intent_response.csv')
+    df_location = multiple_data_location(params, file_path='intent_response_path',file_type='intent_response_file')
+    map_action2answer = read_multiple_files(df_location)
     num_states = len(map_index2state)
 
 
@@ -43,7 +45,7 @@ def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.c
     emb_actions  = all_embeddings(map_index2action,  map_action = map_action2answer)
 
     # init evaluator
-    eval = evaluate(map_state2index, map_index2action)
+    eval = evaluate(params, map_state2index, map_index2action)
         
     sum_rewards = 0
     sum_rewards_bin = 0
@@ -297,7 +299,8 @@ def warmup_run(agent, simulator, params, mapping, use_Q = True, verbose=True):
     print('WARM-UP TRAINING ....')
     agent.clone_dqn = copy.deepcopy(agent.dqn)
     #agent.train(4, 10)
-    agent.train(30,50, num_iter = 100)
+    # agent.train(30,50, num_iter = 100)
+    agent.train(3,5, num_iter = 10)
 
     return agent, Q_table
 

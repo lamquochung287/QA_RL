@@ -29,12 +29,12 @@ params = parameters()
 #######################################################
 # load logs data --> used by the simulator
 ######################################################
-df, dict_intents, top_intents = load_data(params, max_intents = 6)
+df, dict_intents, intents = load_data(params, max_intents = 6)
 
 #######################################################
 # Load NLU agent - rasa or watson 
 ######################################################
-NLU = set_nlu(params, 'rasa', top_intents)
+NLU = set_nlu(params, 'rasa', intents)
 
 # return dict with mapping of sets of states/actions to index
 mapping = get_mapping(NLU, df) #defined in utils.py
@@ -74,7 +74,7 @@ if model_path is None:
 params_model = config_score_model()
     
 # load dat to train score model (utils.py)
-x, y, emb_u, emb_r = score_data()
+x, y, emb_u, emb_r = score_data(params)
 
 #init score model (in learning_scores/score_model.py)
 model = score_model(params_model)

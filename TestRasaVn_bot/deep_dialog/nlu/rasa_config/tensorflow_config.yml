@@ -30,7 +30,7 @@ pipeline:
   #   model_name: "bert"
   #   model_weights: "rasa/LaBSE"
   - name: "DIETClassifier"
-    epochs: 100
+    epochs: 1
     embedding_dimension: 10
     constrain_similarities: true
     model_confidence: "softmax"

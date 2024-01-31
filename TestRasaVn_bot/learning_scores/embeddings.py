@@ -5,6 +5,7 @@ import nltk
 # from nltk.tokenize import RegexpTokenizer
 # from underthesea import stopwords
 from underthesea import word_tokenize
+# from underthesea.datasets.stopwords import stopwords
 import tensorflow as tf
 import tensorflow_hub as hub
 
@@ -71,21 +72,21 @@ class embeddings(object):
     def _tokenizer(self, text, special_chars=['<br']):
            """ tokenize text and remove stopwords """
         
-        #    #Step 1: remove special chars
-        #    for spch in special_chars:
-        #        text = text.replace(spch,'')
+           #Step 1: remove special chars
+           for spch in special_chars:
+               text = text.replace(spch,'')
 
-        #    # Step 2: tokenize text inot list of low case tokens
-        # #    tokenizer = RegexpTokenizer(r'\w+')
-        #    tokenizer = word_tokenize
-        #    tokens = tokenizer.tokenize(text.lower())
+           # Step 2: tokenize text inot list of low case tokens
+        #    tokenizer = RegexpTokenizer(r'\w+')
+           tokenizer = word_tokenize
+           tokens = tokenizer.tokenize(text.lower())
 
-        #    # Step 3 : TODO : stemming
+           # Step 3 : TODO : stemming
 
-        #    # Step 4: remove stopwords
-        #    words = np.array([w for w in tokens if w not in self.STOP]) #tokens without stopwords
+           # Step 4: remove stopwords
+           words = np.array([w for w in tokens if w not in self.STOP]) #tokens without stopwords
 
-        #    return words
+           return words
 
     def _BoW(self, words, wei=None):
 

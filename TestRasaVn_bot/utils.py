@@ -2,17 +2,39 @@ import pandas as pd
 import random
 import numpy as np
 import copy
+import json
 from learning_scores.embeddings import *
+from pathlib import Path
 
 def parameters():
     """ configuration for RL agent """
     
     config = {}
-    config['log_file'] = 'data_chapter04.csv' #file with conversation
+    
+    config['data_path'] = './data/main'
+    config['data_file'] = ['chapter01.csv','chapter02.csv','chapter03.csv',
+                          'chapter04.csv','chapter05.csv','chapter06.csv',
+                          'chapter07.csv','chapter08.csv','chapter09.csv']
+    
+    config['training_path'] = './data/training'
+    config['training_file'] = ['chapter01_Datatraining.json','chapter02_Datatraining.json','chapter03_Datatraining.json',
+                          'chapter04_Datatraining.json','chapter05_Datatraining.json','chapter06_Datatraining.json',
+                          'chapter07_Datatraining.json','chapter08_Datatraining.json','chapter09_Datatraining.json']
+    
+    config['intent_response_path'] = './data/intent_response'
+    config['intent_response_file'] = ['chapter01_intent_response.csv','chapter02_intent_response.csv','chapter03_intent_response.csv',
+                          'chapter04_intent_response.csv','chapter05_intent_response.csv','chapter06_intent_response.csv',
+                          'chapter07_intent_response.csv','chapter08_intent_response.csv','chapter09_intent_response.csv']
+    
+    config['test_path'] = './data/test'
+    config['test_file'] = ['chapter01_test_set.csv','chapter02_test_set.csv','chapter03_test_set.csv',
+                          'chapter04_test_set.csv','chapter05_test_set.csv','chapter06_test_set.csv',
+                          'chapter07_test_set.csv','chapter08_test_set.csv','chapter09_test_set.csv']
+    
     config['nlu'] = 'rasa' #either watson or rasa
-    config['num_episodes_warm'] = 50 # should be similar to number of conversations 
-    config['train_freq_warm'] = 50 # if equal to num_episodes_war --> 1 training epoch, which is enough for warmp-up
-    config['num_episodes'] = 50 # total number of episodes 
+    config['num_episodes_warm'] = 10 # should be similar to number of conversations 
+    config['train_freq_warm'] = 10 # if equal to num_episodes_war --> 1 training epoch, which is enough for warmp-up
+    config['num_episodes'] = 10 # total number of episodes 
     config['train_freq'] =  10 #30 number of episodes per training epochs
     config['epsilon'] = 0.2 #initial
     config['epsilon_f'] = 0.05 #epsilon after epsilon_epoch_f epochs
@@ -43,6 +65,37 @@ def watson_config():
 
     return
 
+def multiple_data_location(params, file_path, file_type):
+    files = []
+    prefix = params[file_path]
+     
+    for fileNames in params[file_type]:
+        path = Path(prefix + '/' + fileNames)
+        file_exists = path.is_file()
+        if file_exists == True: 
+            files.append(prefix + '/' + fileNames)
+    
+    return files
+
+def read_multiple_files(files, suffix='csv'):
+    # df = pd.read_csv(file)
+    _list = []
+    if suffix == 'json':
+        for filename in files:
+            with open(filename, 'r', encoding='utf-8') as f:
+                js = json.load(f)
+                _list.append(js)
+        
+    if suffix == 'csv':
+        dfs = []
+        for filename in files:
+            df = pd.read_csv(filename)
+            dfs.append(df)
+        _list = pd.concat(dfs, ignore_index=True)
+    
+    return _list
+    
+    # return ""
 
 #def load_data(file='GS_logs.csv', max_intents = 7):
 def load_data(params, max_intents = 7 ):    
@@ -50,8 +103,9 @@ def load_data(params, max_intents = 7 ):
 
     print('------------- Loading conversations ---------------')
 
-    file = params['log_file']
-    df = pd.read_csv(file)
+    # file = params['log_file']
+    df_location = multiple_data_location(params, file_path='data_path', file_type='data_file')
+    df = read_multiple_files(df_location)
     
     df.dropna(subset=['reward'], how='all', inplace = True)
     df.dropna(subset=['question'], how='all', inplace = True)
@@ -59,15 +113,15 @@ def load_data(params, max_intents = 7 ):
 
     print('lenght of original DataFrame:', len(df.index))
     
-    df_top_intents, dict_intent, top_intents = get_top_intents(df, max_num_intents = max_intents)
-    print('Size of  top intents dataframe:', len(df_top_intents.index))
+    df_intents, dict_intent, intents = get_intents(df, max_num_intents = max_intents)
+    print('Size of intents dataframe:', len(df_intents.index))
     
     # remove feedback intent, as it does not have answer
-    df_top_intents = df_top_intents[df_top_intents['intent'] != 'Feedback']
+    df_intents = df_intents[df_intents['intent'] != 'Feedback']
 
     print()
     
-    return df_top_intents, dict_intent, top_intents
+    return df_intents, dict_intent, intents
 
 def get_df_feedback(df):
     """ transform original dataset of covnewrsation into convenient format with feedback """
@@ -109,7 +163,7 @@ def get_df_feedback(df):
 
 
 
-def get_top_intents(df, max_num_intents = 90, remove_fallback=True):
+def get_intents(df, max_num_intents = 90, remove_fallback=True):
     """ This function selects the max_num_intents intents more frequently triggered by the users and return dataframe with these intents only"""
 
     # df_feedback = get_df_feedback(df)
@@ -132,23 +186,26 @@ def get_top_intents(df, max_num_intents = 90, remove_fallback=True):
 
     count_intent_sorted = np.array(count_intent)[isort]
 
-    top_intents = [dictionary['intent'] for dictionary in count_intent_sorted[0:len(count_intent_sorted)]]
+    intents = [dictionary['intent'] for dictionary in count_intent_sorted]
 
-    print('top_intents:', top_intents)
+    print('intents:', intents)
 
-    if 'No intent detected' in top_intents  and remove_fallback:
-        top_intents.remove('No intent detected')
+    if 'No intent detected' in intents and remove_fallback == True:
+        intents.remove('No intent detected')
 
-    df_top_intents = df.loc[df['intent'].isin(top_intents)]
+    df_intents = df.loc[df['intent'].isin(intents)]
  
 
-    return df_top_intents, count_intent, top_intents
+    return df_intents, count_intent, intents
 
-def score_data(file='./data_chapter04.csv', thre_augm = 0.9):
+def score_data(params, thre_augm = 0.9):
     """ Load and transform (embeddings) data to train score model """
     
     ### Prepare Data for training score_model
-    dialog_short = pd.read_csv(file)
+    # dialog_short = pd.read_csv(file)
+    # df_location = multiple_data_location(params, file_path='test_path', file_type='test_file') # will edit test_file later
+    df_location = multiple_data_location(params, file_path='data_path', file_type='data_file')
+    dialog_short = read_multiple_files(df_location)
 
     scores_inv = np.array(dialog_short['feedback'])
     
