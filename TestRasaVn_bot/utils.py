@@ -203,8 +203,8 @@ def score_data(params, thre_augm = 0.9):
     
     ### Prepare Data for training score_model
     # dialog_short = pd.read_csv(file)
-    # df_location = multiple_data_location(params, file_path='test_path', file_type='test_file') # will edit test_file later
-    df_location = multiple_data_location(params, file_path='data_path', file_type='data_file')
+    df_location = multiple_data_location(params, file_path='test_path', file_type='test_file') # will edit test_file later
+    # df_location = multiple_data_location(params, file_path='data_path', file_type='data_file')
     dialog_short = read_multiple_files(df_location)
 
     scores_inv = np.array(dialog_short['feedback'])
