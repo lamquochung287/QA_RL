@@ -17,7 +17,7 @@ class rasa():
     Methods:
     train(): train NLU with training set given in congif file
     predict(utterance): predict NLU response
-         Return: message, intent, confidence
+        Return: message, intent, confidence
     """
     
     def __init__(self, params, intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file=''):
@@ -35,6 +35,7 @@ class rasa():
         # initial training data
         # with open(training_file, 'r', encoding='utf-8') as f:
         #     self.training_dict = json.load(f)
+            
         df_location = multiple_data_location(params, file_path='training_path', file_type='training_file')
         self.training_dict = read_multiple_files(df_location, 'json')
 
@@ -43,11 +44,11 @@ class rasa():
 
         self.training_data = training_data_init
         # self.temp_training_file = self.training_dir + '/all_chapter_Datatraining_tmp.json'
-        # self.training_file = training_file
-        # for file in self.training_dir:
-            
-        #     if file != self.temp_training_file:
-        #         shutil.copy(training_file, self.temp_training_file)
+        # print('Training temp directory: ', self.temp_training_file)
+        # self.training_file = df_location
+        # for training_location in self.training_file:           
+        #     if training_location != self.temp_training_file:
+        #         shutil.copy(self.training_file, self.temp_training_file)
 
         # training
         self.train()
@@ -105,7 +106,7 @@ class rasa():
         # if save_json:
         #     with open(self.temp_training_file, 'w') as fp:
         #         json.dump(data, fp, indent=2)
-        #         #print('Training set written to %s' % self.temp_training_file)
+        #         print('Training set written to %s' % self.temp_training_file)
         return
 
     def make_ex_dict(self,utterance, intent):
@@ -149,4 +150,5 @@ class rasa():
             map_index2action[count] = action
             count += 1
 
+        print('total intent count', count)
         return map_index2action, map_action2index

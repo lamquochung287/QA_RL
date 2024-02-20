@@ -7,9 +7,9 @@ class score_model(object):
     Methods (public):
     ------------------------------------------
     fit(train_x, train_y, test_x=None, test_y=None, path_to_model = None):
-         train model and save it to path_to_model
+        train model and save it to path_to_model
     predict(self, test_x, path_to_model = None):
-          returns prediction by restoring the model at path_to_model 
+        returns prediction by restoring the model at path_to_model 
     """
     
     def __init__(self, params, alpha=None, beta=None):
@@ -18,15 +18,16 @@ class score_model(object):
         ---------------------------------
         params: dictionary with model configuration (defined in utils.py)
         alpha, beta: float (optional)
-             Normalization parameters, if they're not provided, the embeddings for utt ans resp have to be provided in the fit method
-             and the paramters are computed there
+            Normalization parameters, if they're not provided, the embeddings for utt ans resp have to be provided in the fit method
+            and the paramters are computed there
         
         """
         
         self.epochs = params['epochs']
         self.learning_rate = params['lr']
         self.l2_reg = params['l2_reg']
-        self.path_to_model = "./tmp/model.ckpt"
+        # self.path_to_model = "./tmp/model.ckpt"
+        self.path_to_model = "../trained_model/tmp/model.ckpt"
         self.print_freq = params['print_freq']
         
         self.alpha = alpha
@@ -36,6 +37,7 @@ class score_model(object):
 
     def fit(self, train_x, train_y, emb_u=None, emb_r=None, test_x=None, test_y=None, path_to_model = None):
 
+        print('(fit) is path_to_model available?: ', path_to_model)
         if path_to_model is None:
             path_to_model = self.path_to_model
 
@@ -132,6 +134,7 @@ class score_model(object):
             
 
             save_path = saver.save(session, path_to_model)
+            print(f"save_path: {save_path}")
             
         return train_acc, test_acc
 
@@ -167,12 +170,12 @@ class score_model(object):
         
     def predict(self, test_x, path_to_model = None):
         
-  
+        print('(predict) is path_to_model available?: ', path_to_model)
         ## Define paths for model       
         if path_to_model is None:
             path_to_model = self.path_to_model
 
-        #print('Restoring model:', path_to_model)    
+        print('Restoring model:', path_to_model)    
         path_meta = path_to_model+'.meta'
         path_ckp = path_to_model.replace(path_to_model.split('/')[-1], '')
         
@@ -180,23 +183,23 @@ class score_model(object):
         with tf.Session() as session:
 
                 
-                session.run([tf.global_variables_initializer(), tf.tables_initializer()])
+            session.run([tf.global_variables_initializer(), tf.tables_initializer()])
 
-                # Load saved model
-                saver = tf.train.import_meta_graph(path_meta)
-                saver.restore(session,tf.train.latest_checkpoint(path_ckp))
+            # Load saved model
+            saver = tf.train.import_meta_graph(path_meta)
+            saver.restore(session,tf.train.latest_checkpoint(path_ckp))
 
-                # Access graph of restored model
-                graph_r = tf.get_default_graph()
+            # Access graph of restored model
+            graph_r = tf.get_default_graph()
 
-                # Access tensors
-                x = graph_r.get_tensor_by_name("x:0")
-                
-                output = graph_r.get_tensor_by_name("pred_to_restore:0")
+            # Access tensors
+            x = graph_r.get_tensor_by_name("x:0")
+            
+            output = graph_r.get_tensor_by_name("pred_to_restore:0")
 
-                prediction = session.run(output, feed_dict = {x: test_x})
-                
-                pred_test = (prediction - self.alpha)/self.beta
+            prediction = session.run(output, feed_dict = {x: test_x})
+            
+            pred_test = (prediction - self.alpha)/self.beta
                         
 
         return pred_test

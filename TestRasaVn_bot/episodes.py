@@ -8,6 +8,7 @@ import copy
 import pandas as pd
 import pickle
 
+# line 158 notes
 def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.csv', use_model = True, thre_no_intent=0.5):
     """ Run episodes and train DQN 
     Parameters:
@@ -20,8 +21,8 @@ def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.c
     mapping: dict (maps from index to set of states/action and viceversa)
     output: string (optional)
     use_model: boolean (optional)
-         if True use score model as rewards
-         if False use interactive rewards (prompt the user)
+        if True use score model as rewards
+        if False use interactive rewards (prompt the user)
     thre_no_intent: float (optional)     
     """
 
@@ -130,7 +131,13 @@ def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.c
             print('TRAINING DQN agent...')
             
             agent.clone_dqn = copy.deepcopy(agent.dqn)
-            agent.train(4, 10, num_iter = 100)
+            batch_size = params['numInterOfAgentDQNTraining_batchSize']
+            num_batches = params['numInterOfAgentDQNTraining_numBatches']
+            num_iter = params['numInterOfAgentDQNTraining_numIter']
+            mini_batches = params['numInterOfAgentDQNTraining_miniBatches']
+            # agent.train(4, 10, num_iter = 10) #if train all data chapter 1->9, 50 is too long, 10-20 is good
+            #batch_size=1, num_batches=100, num_iter =1000, mini_batches = False
+            agent.train(batch_size, num_batches, num_iter, mini_batches) 
 
             success_rate = eval.fit(agent) #success rate on test set
             re_bin_low, re_bin_up = proportion_confint(sum_rewards_bin, count_episodes) #CI based on binomial distr., alpha=0.05
@@ -148,7 +155,7 @@ def episodes_run(agent, NLU, simulator, model, params, mapping, output='epochs.c
             
             save_model('./models/', agent, epoch)
             
-            if avg_score > 0.7:
+            if avg_score > 0.5: #### 0.7 is default
                 flush = True
                 
             sum_rewards = 0
@@ -182,9 +189,10 @@ def get_reward_model(questions, actions, emb_u, emb_a, model, map_action2answer)
 
         x[0,i,:] = np.array(emb_u[i])#[0:embed_size]
         x[1,i,:] = np.array(emb_a[i])#[0:embed_size]
- 
 
-    pred = model.predict(x, path_to_model = "./learning_scores/trained_model/model_final.ckpt")
+
+    # pred = model.predict(x, path_to_model = "./learning_scores/trained_model/model_final.ckpt")
+    pred = model.predict(x, path_to_model = "./trained_model/model_final.ckpt")
 
     return pred
 
@@ -206,8 +214,8 @@ def all_embeddings(map_index2sent, map_action=None):
 
     if map_action is not None:
         
-         answers = [map_action.loc[map_action['intent'] == action]['answer'].values[0] for action in sentences]
-         sentences = answers
+        answers = [map_action.loc[map_action['intent'] == action]['answer'].values[0] for action in sentences]
+        sentences = answers
     
     EMB = embeddings([], embed_par='tf')
     emb = EMB.fit(sentences)
@@ -218,7 +226,7 @@ def all_embeddings(map_index2sent, map_action=None):
 def warmup_run(agent, simulator, params, mapping, use_Q = True, verbose=True):
     """ Initial DQN training on NLU, usijg NLU confidence as reward """
     
- 
+
     # allow use of Q-table, useful when using Watson to store results in a Q-table and avoid API calls
     Q_table = Q_tab(mapping)
 
@@ -297,10 +305,19 @@ def warmup_run(agent, simulator, params, mapping, use_Q = True, verbose=True):
         Q_table.save_Q()
 
     print('WARM-UP TRAINING ....')
+    
     agent.clone_dqn = copy.deepcopy(agent.dqn)
-    #agent.train(4, 10)
-    # agent.train(30,50, num_iter = 100)
-    agent.train(3,5, num_iter = 10)
+    batch_size = params['numInterOfAgentTrainWarmup_batchSize']
+    num_batches = params['numInterOfAgentTrainWarmup_numBatches']
+    num_iter = params['numInterOfAgentTrainWarmup_numIter']
+    mini_batches = params['numInterOfAgentTrainWarmup_miniBatches']
+    # agent.train(4, 10)
+    # agent.train(30,50, num_iter = 50)
+    # agent.train(15, 30, num_iter = 50)
+    agent.train(batch_size, num_batches, num_iter, mini_batches)
+    # agent.train(10, 30, num_iter = 10)
+    # agent.train(10, 30, num_iter = 10, mini_batches=True)
+    # agent.train(3,5, num_iter = 10)
 
     return agent, Q_table
 
@@ -362,7 +379,7 @@ def fill_buffer_all_actions(agent, s_t, action, reward, s_t_plus1, episode_over,
     else: #in episodes do augmentation only for high reward (high confidence in action)
         if reward > reward_thre:
             do_augmentation = True
-          
+
     if do_augmentation:
         
         # fill buffer for other actions, which would get low reward
@@ -384,9 +401,9 @@ def save_model(path, agent, epoch):
     #checkpoint['params'] = params
     try:
         pickle.dump(checkpoint, open(filepath, "wb"))
-        print('saved model in %s' % (filepath, ))
-    except Exception as e:    
-        print('Error: Writing model fails: %s' % (filepath, ))
+        print(f'saved model in {filepath}')
+    except Exception as e:
+        print(f'Error: Writing model fails: {filepath}')
         print(e)
 
         

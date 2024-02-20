@@ -1,0 +1,455 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Điều gì được quy định ở phạm vi điều chỉnh của luật hôn nhân và gia đình",
+        "intent": "1_1"
+      },
+      {
+        "text": "Luật Hôn nhân và gia đình quy định gì?",
+        "intent": "1_1"
+      },
+      {
+        "text": "Phạm vi điều chỉnh của luật hôn nhân và gia đình là gì",
+        "intent": "1_1"
+      },
+      {
+        "text": "Nguyên tắc cơ bản nào về hôn nhân và gia đình được quy định?",
+        "intent": "1_2_1"
+      },
+      {
+        "text": "Nước ta quy định gì về chế độ hôn nhân",
+        "intent": "1_2_1"
+      },
+      {
+        "text": "Quy định về hôn nhân như thế nào?",
+        "intent": "1_2_1"
+      },
+      {
+        "text": "Những yếu tố nào cấu thành chế độ hôn nhân và gia đình?",
+        "intent": "1_2_1"
+      },
+      {
+        "text": "Hôn nhân giữa người có tín ngưỡng và người không có tín ngưỡng được quyền lợi gì?",
+        "intent": "1_2_2"
+      },
+      {
+        "text": "Hôn nhân giữa người có tín ngưỡng và người không có tín ngưỡng có được không?",
+        "intent": "1_2_2"
+      },
+      {
+        "text": "Hôn nhân giữa công dân Việt Nam thuộc các dân tộc, tôn giáo có quyền lợi gì",
+        "intent": "1_2_2"
+      },
+      {
+        "text": "Hôn nhân giữa công dân Việt Nam với người nước ngoài như thế nào",
+        "intent": "1_2_2"
+      },
+      {
+        "text": "Nguyên tắc cơ bản về gia đình?",
+        "intent": "1_2_3"
+      },
+      {
+        "text": "Xây dựng gia đình dựa trên nguyên tắc gì",
+        "intent": "1_2_3"
+      },
+      {
+        "text": "Gia đình và xã hội có trách nhiệm gì đối với trẻ em, người cao tuổi, và người khuyết tật?",
+        "intent": "1_2_4"
+      },
+      {
+        "text": "Nhà nước hỗ trợ gì về quyền hôn nhân và gia đình với người dân có hoàn cảnh khó khăn?",
+        "intent": "1_2_4"
+      },
+      {
+        "text": "Những gì cần được kế thừa và phát huy trong chế độ hôn nhân và gia đình?",
+        "intent": "1_2_5"
+      },
+      {
+        "text": "Các yếu tố nào cần được kế thừa trong hôn nhân và gia đình?",
+        "intent": "1_2_5"
+      },
+      {
+        "text": "Hôn nhân được định nghĩa như thế nào?",
+        "intent": "1_3_1"
+      },
+      {
+        "text": "Định nghĩa của hôn nhân?",
+        "intent": "1_3_1"
+      },
+      {
+        "text": "Sau khi kết hôn mối quan hệ giữa vợ và chồng được gọi là gì?",
+        "intent": "1_3_1"
+      },
+      {
+        "text": "Gia đình là gì và được xác định như thế nào?",
+        "intent": "1_3_2"
+      },
+      {
+        "text": "Gia đình là gì?",
+        "intent": "1_3_2"
+      },
+      {
+        "text": "Định nghĩa của gia đình là gì?",
+        "intent": "1_3_2"
+      },
+      {
+        "text": "Hiểu như thế nào là gia đình và mối quan hệ như thế nào?",
+        "intent": "1_3_2"
+      },
+      {
+        "text": "Chế độ hôn nhân và gia đình bao gồm những gì?",
+        "intent": "1_3_3"
+      },
+      {
+        "text": "Chế độ hôn nhân và gia đình là gì?",
+        "intent": "1_3_3"
+      },
+      {
+        "text": "Xác định cha, mẹ, con nằm trong đâu?",
+        "intent": "1_3_3"
+      },
+      {
+        "text": "Tập quán về hôn nhân và gia đình được mô tả như thế nào?",
+        "intent": "1_3_4"
+      },
+      {
+        "text": "Tập quán về hôn nhân và gia đình là gì?",
+        "intent": "1_3_4"
+      },
+      {
+        "text": "Kết hôn được định nghĩa như thế nào?",
+        "intent": "1_3_5"
+      },
+      {
+        "text": "Kết hôn là gì",
+        "intent": "1_3_5"
+      },
+      {
+        "text": "Định nghĩa của kết hôn là gì?",
+        "intent": "1_3_5"
+      },
+      {
+        "text": "Kết hôn trái pháp luật là gì?",
+        "intent": "1_3_6"
+      },
+      {
+        "text": "Khi nào tính là kết hôn trái pháp luật?",
+        "intent": "1_3_6"
+      },
+      {
+        "text": "Kết hôn trái pháp luật có thể xảy ra khi nào?",
+        "intent": "1_3_6"
+      },
+      {
+        "text": "Chung sống như vợ chồng là gì?",
+        "intent": "1_3_7"
+      },
+      {
+        "text": "Nam và nữ sống chung với nhau có được tính như vợ chồng không?",
+        "intent": "1_3_7"
+      },
+      {
+        "text": "Tảo hôn là gì?",
+        "intent": "1_3_8"
+      },
+      {
+        "text": "Kết hôn chưa đủ tuổi theo quy định thì gọi là gì?",
+        "intent": "1_3_8"
+      },
+      {
+        "text": "Cưỡng ép kết hôn, ly hôn là gì?",
+        "intent": "1_3_9"
+      },
+      {
+        "text": "Khi nào được tính là cưỡng ép kết hôn?",
+        "intent": "1_3_9"
+      },
+      {
+        "text": "Đe dọa vợ hoặc chồng ly hôn gọi là gì?",
+        "intent": "1_3_9"
+      },
+      {
+        "text": "Cản trở kết hôn, ly hôn là gì?",
+        "intent": "1_3_10"
+      },
+      {
+        "text": "Cản trở ly hôn là gì?",
+        "intent": "1_3_10"
+      },
+      {
+        "text": "Cản trở kết hôn là gì?",
+        "intent": "1_3_10"
+      },
+      {
+        "text": "Kết hôn giả tạo là gì?",
+        "intent": "1_3_11"
+      },
+      {
+        "text": "Thế nào là kết hôn giả tạo?",
+        "intent": "1_3_11"
+      },
+      {
+        "text": "Yêu sách của cải trong kết hôn là gì?",
+        "intent": "1_3_12"
+      },
+      {
+        "text": "Thế nào là Yêu sách của cải trong kết hôn?",
+        "intent": "1_3_12"
+      },
+      {
+        "text": "Thời kỳ hôn nhân là thời gian tính từ khi nào đến khi nào?",
+        "intent": "1_3_13"
+      },
+      {
+        "text": "Hôn nhân được tính từ khi nào?",
+        "intent": "1_3_13"
+      },
+      {
+        "text": "Thời kỳ hôn nhân là gì?",
+        "intent": "1_3_13"
+      },
+      {
+        "text": "Ly hôn là gì?",
+        "intent": "1_3_14"
+      },
+      {
+        "text": "Thế nào là ly hôn?",
+        "intent": "1_3_14"
+      },
+      {
+        "text": "Ly hôn giả tạo là gì?",
+        "intent": "1_3_15"
+      },
+      {
+        "text": "Ly hôn giả là gì?",
+        "intent": "1_3_15"
+      },
+      {
+        "text": "Thành viên gia đình bao gồm những ai?",
+        "intent": "1_3_16"
+      },
+      {
+        "text": "Thành viên gia đình gồm ai?",
+        "intent": "1_3_16"
+      },
+      {
+        "text": "Những người cùng dòng máu về trực hệ là những ai?",
+        "intent": "1_3_17"
+      },
+      {
+        "text": "Những người cùng dòng máu về trực hệ bao gồm ai?",
+        "intent": "1_3_17"
+      },
+      {
+        "text": "Những người có họ trong phạm vi ba đời là ai?",
+        "intent": "1_3_18"
+      },
+      {
+        "text": "Những người có họ trong phạm vi ba đời?",
+        "intent": "1_3_18"
+      },
+      {
+        "text": "Người thân thích là ai?",
+        "intent": "1_3_19"
+      },
+      {
+        "text": "Ai được tính là người thân thích?",
+        "intent": "1_3_19"
+      },
+      {
+        "text": "Nhu cầu thiết yếu là gì?",
+        "intent": "1_3_20"
+      },
+      {
+        "text": "Như thế nào được tính là nhu cầu thiết yếu?",
+        "intent": "1_3_20"
+      },
+      {
+        "text": "Kỹ thuật nào được sử dụng trong việc sinh con bằng kỹ thuật hỗ trợ sinh sản?",
+        "intent": "1_3_21"
+      },
+      {
+        "text": "Sinh con bằng kỹ thuật hỗ trợ sinh sản là gì?",
+        "intent": "1_3_21"
+      },
+      {
+        "text": "Sinh con bằng thụ tinh nhân tạo còn có tên gọi khác là gì?",
+        "intent": "1_3_21"
+      },
+      {
+        "text": "Mục đích của việc mang thai hộ vì mục đích nhân đạo là gì?",
+        "intent": "1_3_22"
+      },
+      {
+        "text": "Mang thai hộ là gì?",
+        "intent": "1_3_22"
+      },
+      {
+        "text": "Mang thai hộ được làm như thế nào?",
+        "intent": "1_3_22"
+      },
+      {
+        "text": "Việc mang thai hộ vì mục đích thương mại là gì?",
+        "intent": "1_3_23"
+      },
+      {
+        "text": "Mang thai hộ để đổi lấy lợi ích được gọi là gì?",
+        "intent": "1_3_23"
+      },
+      {
+        "text": "Định nghĩa cấp dưỡng theo quy định của Luật này là gì?",
+        "intent": "1_3_24"
+      },
+      {
+        "text": "Cấp dưỡng là gì?",
+        "intent": "1_3_24"
+      },
+      {
+        "text": "Cấp dưỡng định nghĩa như thế nào?",
+        "intent": "1_3_24"
+      },
+      {
+        "text": "Quan hệ hôn nhân và gia đình có yếu tố nước ngoài là gì?",
+        "intent": "1_3_25"
+      },
+      {
+        "text": "Quan hệ hôn nhân và gia đình có yếu tố nước ngoài?",
+        "intent": "1_3_25"
+      },
+      {
+        "text": "Thời kỳ hôn nhân được tính từ khi nào đến khi nào?",
+        "intent": "1_3_13"
+      },
+      {
+        "text": "Có bao nhiêu người được xem là thành viên gia đình?",
+        "intent": "1_3_16"
+      },
+      {
+        "text": "Điều kiện nào làm việc kết hôn trái pháp luật?",
+        "intent": "1_3_6"
+      },
+      {
+        "text": "Theo pháp luật, Nhà nước có những biện pháp nào để bảo hộ hôn nhân và gia đình ở Việt Nam?",
+        "intent": "1_4_1"
+      },
+      {
+        "text": "Trách nhiệm của nhà nước về chính sách đối với hôn nhân và gia đình như thế nào?",
+        "intent": "1_4_1"
+      },
+      {
+        "text": "Nhà nước cần làm gì để bảo hộ hôn nhân và gia đình?",
+        "intent": "1_4_1"
+      },
+      {
+        "text": "Làm thế nào Chính phủ thống nhất quản lý nhà nước về hôn nhân và gia đình, và ai chịu trách nhiệm thực hiện theo sự phân công của Chính phủ?",
+        "intent": "1_4_2"
+      },
+      {
+        "text": "Chính phủ làm gì để quản lý nhà nước về hôn nhân và gia đình?",
+        "intent": "1_4_2"
+      },
+      {
+        "text": "Chính phủ quản lý nhà nước về hôn nhân như thế nào?",
+        "intent": "1_4_2"
+      },
+      {
+        "text": "Cơ quan, tổ chức nào có trách nhiệm giáo dục và vận động nhân dân xây dựng gia đình văn hóa theo quy định của pháp luật?",
+        "intent": "1_4_3"
+      },
+      {
+        "text": "Cơ quan và tổ chức có trách nhiệm gì với hôn nhân của các cá nhân, công dân?",
+        "intent": "1_4_3"
+      },
+      {
+        "text": "Trách nhiệm của cơ quản, tổ chức với hôn nhân và gia đình của công dân?",
+        "intent": "1_4_3"
+      },
+      {
+        "text": "Nhà trường cần phối hợp với gia đình như thế nào trong việc giáo dục và tuyên truyền về pháp luật hôn nhân và gia đình cho thế hệ trẻ?",
+        "intent": "1_4_3"
+      },
+      {
+        "text": "Biện pháp nào được đề xuất để vận động nhân dân xóa bỏ phong tục, tập quán lạc hậu về hôn nhân và gia đình theo hướng phát huy truyền thống tốt đẹp của mỗi dân tộc?",
+        "intent": "1_4_1"
+      },
+      {
+        "text": "Theo Luật, quan hệ hôn nhân và gia đình được thực hiện như thế nào?",
+        "intent": "1_5_1"
+      },
+      {
+        "text": "Quan hệ hôn nhân và gia đình được có được bảo vệ không?",
+        "intent": "1_5_1"
+      },
+      {
+        "text": "Luật cấm những hành vi nào liên quan đến hôn nhân?",
+        "intent": "1_5_2"
+      },
+      {
+        "text": "Các hành vi nào bị cấm trong hôn nhân và gia đình?",
+        "intent": "1_5_2"
+      },
+      {
+        "text": "Nước ta cấm các hành vi nào trong hôn nhân và gia đình",
+        "intent": "1_5_2"
+      },
+      {
+        "text": "Quy định nào về việc xử lý hành vi vi phạm pháp luật về hôn nhân và gia đình?",
+        "intent": "1_5_3"
+      },
+      {
+        "text": "Vi phạm pháp luật về hôn nhân và gia đình sẽ được xử lý như thế nào?",
+        "intent": "1_5_3"
+      },
+      {
+        "text": "Quy định nào về bảo vệ danh dự, nhân phẩm, và quyền riêng tư trong quá trình giải quyết vụ việc về hôn nhân và gia đình?",
+        "intent": "1_5_4"
+      },
+      {
+        "text": "Danh dự và nhân phẩm của các bên trong quá trình giải quyết vụ hôn nhân và gia đình như thế nào?",
+        "intent": "1_5_4"
+      },
+      {
+        "text": "Luật cấm những hành vi nào liên quan đến việc sử dụng quyền về hôn nhân và gia đình để mục đích phi đạo đức?",
+        "intent": "1_5_2"
+      },
+      {
+        "text": "Làm thế nào để xử lý hành vi vi phạm pháp luật về hôn nhân và gia đình theo Luật?",
+        "intent": "1_5_3"
+      },
+      {
+        "text": "Quy định nào áp dụng đối với quan hệ hôn nhân và gia đình khi Luật này không quy định?",
+        "intent": "1_6"
+      },
+      {
+        "text": "Quy định nào áp dụng đối với quan hệ hôn nhân và gia đình?",
+        "intent": "1_6"
+      },
+      {
+        "text": "Luật có quy định gì về việc áp dụng tập quán về hôn nhân và gia đình?",
+        "intent": "1_7_1"
+      },
+      {
+        "text": "Việc áp dụng tập quán về hôn nhân và gia đình, luật có quy định như thế nào?",
+        "intent": "1_7_1"
+      },
+      {
+        "text": "Điều 7 nói gì về việc áp dụng tập quán về hôn nhân và gia đình?",
+        "intent": "1_7_2"
+      },
+      {
+        "text": "Điều 7 có quy định gì về việc áp dụng tập quán về hôn nhân và gia đình?",
+        "intent": "1_7_2"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,727 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Vợ, chồng có bình đẳng về những mặt nào?",
+        "intent": "3_17"
+      },
+      {
+        "text": "Quyền và nghĩa vụ của vợ, chồng là gì?",
+        "intent": "3_17"
+      },
+      {
+        "text": "Điều 18 điều chỉnh về điều gì?",
+        "intent": "3_18"
+      },
+      {
+        "text": "Quyền, nghĩa vụ về nhân thân được làm gì?",
+        "intent": "3_18"
+      },
+      {
+        "text": "Nghĩa vụ nào của vợ chồng được đề cập?",
+        "intent": "3_19_1"
+      },
+      {
+        "text": "Khi nào vợ chồng có thể sống chung với nhau?",
+        "intent": "3_19_2"
+      },
+      {
+        "text": "Ai quyết định nơi cư trú của vợ chồng?",
+        "intent": "3_20"
+      },
+      {
+        "text": "Vợ chồng có nghĩa vụ gì đối với danh dự, nhân phẩm, uy tín của đối phương?",
+        "intent": "3_21"
+      },
+      {
+        "text": "Quyền, nghĩa vụ nào của vợ, chồng về học tập, làm việc, và tham gia các hoạt động?",
+        "intent": "3_23"
+      },
+      {
+        "text": "Vợ, chồng có nghĩa vụ gì đối với danh dự, nhân phẩm, uy tín của đối phương?",
+        "intent": "3_21"
+      },
+      {
+        "text": "Vợ, chồng có nghĩa vụ gì đối với quyền tự do tín ngưỡng, tôn giáo của đối phương?",
+        "intent": "3_22"
+      },
+      {
+        "text": "Vợ, chồng có quyền gì đối với nghề nghiệp và học vấn của đối phương?",
+        "intent": "3_23"
+      },
+      {
+        "text": "Nghĩa vụ nào của vợ, chồng đối với tín ngưỡng và tôn giáo của đối phương?",
+        "intent": "3_22"
+      },
+      {
+        "text": "Vợ, chồng có nghĩa vụ gì đối với công việc trong gia đình?",
+        "intent": "3_23"
+      },
+      {
+        "text": "Theo quy định nào việc đại diện giữa vợ và chồng trong giao dịch được xác định?",
+        "intent": "3_24_1"
+      },
+      {
+        "text": "Vợ, chồng có thể ủy quyền cho nhau như thế nào trong việc xác lập, thực hiện và chấm dứt giao dịch?",
+        "intent": "3_24_2"
+      },
+      {
+        "text": "Khi nào vợ, chồng đại diện cho nhau khi một bên mất năng lực hành vi dân sự?",
+        "intent": "3_24_3"
+      },
+      {
+        "text": "Trong trường hợp một bên vợ, chồng mất năng lực hành vi dân sự mà bên kia có yêu cầu Tòa án giải quyết ly hôn thì căn cứ vào quy định nào?",
+        "intent": "3_24_3"
+      },
+      {
+        "text": "Khi nào người bị mất năng lực hành vi dân sự phải tự mình thực hiện quyền, nghĩa vụ có liên quan?",
+        "intent": "3_24_3"
+      },
+      {
+        "text": "Trong trường hợp vợ, chồng kinh doanh chung, ai là người đại diện hợp pháp trong quan hệ kinh doanh?",
+        "intent": "3_25_1"
+      },
+      {
+        "text": "Khi vợ, chồng đưa tài sản chung vào kinh doanh, áp dụng quy định nào?",
+        "intent": "3_25_2"
+      },
+      {
+        "text": "Khi giấy chứng nhận quyền sở hữu, giấy chứng nhận quyền sử dụng đối với tài sản chung chỉ ghi tên vợ hoặc chồng, việc đại diện giữa vợ và chồng như thế nào?",
+        "intent": "3_26_1"
+      },
+      {
+        "text": "Trong trường hợp vợ hoặc chồng có tên trên giấy chứng nhận quyền sở hữu, giấy chứng nhận quyền sử dụng tài sản, thực hiện giao dịch với người thứ ba trái với quy định về đại diện giữa vợ và chồng của Luật này, kết quả như thế nào?",
+        "intent": "3_26_2"
+      },
+      {
+        "text": "Khi một bên vợ, chồng kinh doanh chung, có thể thực hiện quan hệ kinh doanh như thế nào?",
+        "intent": "3_25_1"
+      },
+      {
+        "text": "Khi vợ, chồng đưa tài sản chung vào kinh doanh, áp dụng quy định nào?",
+        "intent": "3_25_2"
+      },
+      {
+        "text": "Khi giấy chứng nhận quyền sở hữu, giấy chứng nhận quyền sử dụng đối với tài sản chung chỉ ghi tên vợ hoặc chồng, việc đại diện giữa vợ và chồng như thế nào?",
+        "intent": "3_26_1"
+      },
+      {
+        "text": "Khi vợ hoặc chồng có tên trên giấy chứng nhận quyền sở hữu, giấy chứng nhận quyền sử dụng tài sản, thực hiện giao dịch với người thứ ba trái với quy định về đại diện giữa vợ và chồng của Luật này, kết quả như thế nào?",
+        "intent": "3_26_2"
+      },
+      {
+        "text": "Vợ, chồng chịu trách nhiệm liên đới đối với giao dịch nào?",
+        "intent": "3_27_1"
+      },
+      {
+        "text": "Vợ, chồng chịu trách nhiệm liên đới về những nghĩa vụ nào?",
+        "intent": "3_27_2"
+      },
+      {
+        "text": "Vợ chồng có quyền lựa chọn áp dụng chế độ tài sản theo điều gì?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Chế độ tài sản theo luật định được thực hiện như thế nào?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Chế độ tài sản theo thỏa thuận được thực hiện như thế nào?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Các quy định tại các điều 29, 30, 31 và 32 của Luật này áp dụng như thế nào?",
+        "intent": "3_28_2"
+      },
+      {
+        "text": "Chính phủ có quy định chi tiết gì về chế độ tài sản của vợ chồng?",
+        "intent": "3_28_3"
+      },
+      {
+        "text": "Nguyên tắc chung về chế độ tài sản của vợ chồng nêu gì?",
+        "intent": "3_29_1"
+      },
+      {
+        "text": "Vợ, chồng có nghĩa vụ gì trong việc thực hiện quyền, nghĩa vụ về tài sản?",
+        "intent": "3_29_2"
+      },
+      {
+        "text": "Việc thực hiện quyền, nghĩa vụ về tài sản của vợ chồng như thế nào?",
+        "intent": "3_29_3"
+      },
+      {
+        "text": "Vợ, chồng có quyền, nghĩa vụ gì trong việc đáp ứng nhu cầu thiết yếu của gia đình?",
+        "intent": "3_30_1"
+      },
+      {
+        "text": "Khi vợ chồng không có tài sản chung hoặc tài sản chung không đủ, vợ, chồng có nghĩa vụ gì?",
+        "intent": "3_30_2"
+      },
+      {
+        "text": "Vợ chồng cần thỏa thuận gì khi có giao dịch liên quan đến nhà là nơi ở duy nhất của họ?",
+        "intent": "3_31"
+      },
+      {
+        "text": "Trong giao dịch với người thứ ba ngay tình, vợ, chồng làm gì?",
+        "intent": "3_32_1"
+      },
+      {
+        "text": "Trong giao dịch với người thứ ba ngay tình, vợ, chồng chiếm hữu động sản thì làm thế nào?",
+        "intent": "3_32_2"
+      },
+      {
+        "text": "Tài sản chung của vợ chồng bao gồm những gì?",
+        "intent": "3_33_1"
+      },
+      {
+        "text": "Tài sản chung của vợ chồng thuộc sở hữu như thế nào?",
+        "intent": "3_33_2"
+      },
+      {
+        "text": "Trong trường hợp tranh chấp tài sản làm thế nào?",
+        "intent": "3_33_3"
+      },
+      {
+        "text": "Khi tài sản chung cần đăng ký quyền sở hữu, quyền sử dụng, điều gì được ghi trên giấy chứng nhận?",
+        "intent": "3_34_1"
+      },
+      {
+        "text": "Nếu giấy chứng nhận quyền sở hữu, giấy chứng nhận quyền sử dụng chỉ ghi tên một bên vợ hoặc chồng thì sao?",
+        "intent": "3_34_2"
+      },
+      {
+        "text": "Việc chiếm hữu, sử dụng, định đoạt tài sản chung có được thực hiện theo thỏa thuận không?",
+        "intent": "3_35_1"
+      },
+      {
+        "text": "Trong những trường hợp nào việc định đoạt tài sản chung cần có sự thỏa thuận bằng văn bản của vợ chồng?",
+        "intent": "3_35_2"
+      },
+      {
+        "text": "Khi vợ chồng có thỏa thuận đưa tài sản chung vào kinh doanh, ai có quyền thực hiện giao dịch liên quan đến tài sản chung?",
+        "intent": "3_36"
+      },
+      {
+        "text": "Vợ chồng có những nghĩa vụ chung về tài sản nào?",
+        "intent": "3_37_1"
+      },
+      {
+        "text": "Vợ chồng có nghĩa vụ gì phát sinh từ giao dịch cùng thỏa thuận xác lập?",
+        "intent": "3_37_1"
+      },
+      {
+        "text": "Vợ chồng có nghĩa vụ gì nhằm đáp ứng nhu cầu thiết yếu của gia đình?",
+        "intent": "3_37_2"
+      },
+      {
+        "text": "Nghĩa vụ chung của vợ chồng liên quan đến việc chiếm hữu, sử dụng, định đoạt tài sản chung như thế nào?",
+        "intent": "3_37_3"
+      },
+      {
+        "text": "Nghĩa vụ chung của vợ chồng liên quan đến việc sử dụng tài sản riêng để duy trì, phát triển khối tài sản chung như thế nào?",
+        "intent": "3_37_4"
+      },
+      {
+        "text": "Vợ chồng có nghĩa vụ gì phát sinh từ việc bồi thường thiệt hại do con gây ra?",
+        "intent": "3_37_5"
+      },
+      {
+        "text": "Nghĩa vụ chung của vợ chồng có liên quan đến việc sử dụng tài sản riêng để tạo ra nguồn thu nhập chủ yếu của gia đình như thế nào?",
+        "intent": "3_37_4"
+      },
+      {
+        "text": "Nghĩa vụ chung của vợ chồng có các điều kiện gì để thực hiện?",
+        "intent": "3_37_1"
+      },
+      {
+        "text": "Nghĩa vụ chung của vợ chồng có thể bị bồi thường như thế nào?",
+        "intent": "3_37_5"
+      },
+      {
+        "text": "Trong thời kỳ hôn nhân, vợ chồng có quyền làm gì đối với tài sản chung?",
+        "intent": "3_38_1"
+      },
+      {
+        "text": "Điều kiện nào để thỏa thuận về chia tài sản chung của vợ chồng có hiệu lực?",
+        "intent": "3_38_2"
+      },
+      {
+        "text": "Trong trường hợp không có thỏa thuận về chia tài sản chung, vợ chồng có quyền làm gì?",
+        "intent": "3_38_3"
+      },
+      {
+        "text": "Thời điểm nào việc chia tài sản chung trong thời kỳ hôn nhân có hiệu lực?",
+        "intent": "3_39_1"
+      },
+      {
+        "text": "Việc chia tài sản chung có hiệu lực như thế nào khi thỏa thuận tuân thủ hình thức quy định của pháp luật?",
+        "intent": "3_39_2"
+      },
+      {
+        "text": "Thời điểm nào việc chia tài sản chung do Tòa án giải quyết có hiệu lực?",
+        "intent": "3_39_3"
+      },
+      {
+        "text": "Quyền, nghĩa vụ về tài sản giữa vợ, chồng với người thứ ba có giá trị pháp lý như thế nào trước thời điểm việc chia tài sản chung có hiệu lực?",
+        "intent": "3_39_4"
+      },
+      {
+        "text": "Hậu quả của việc chia tài sản chung trong thời kỳ hôn nhân như thế nào?",
+        "intent": "3_40_1"
+      },
+      {
+        "text": "Thỏa thuận của vợ chồng về việc chia tài sản chung có ảnh hưởng đến quyền, nghĩa vụ về tài sản trước đó giữa vợ, chồng với người thứ ba như thế nào?",
+        "intent": "3_40_2"
+      },
+      {
+        "text": "Việc chia tài sản chung của vợ chồng ảnh hưởng như thế nào đến quyền, nghĩa vụ về tài sản giữa vợ, chồng với người thứ ba?",
+        "intent": "3_40_2"
+      },
+      {
+        "text": "Thời điểm nào quyền, nghĩa vụ về tài sản giữa vợ, chồng với người thứ ba phát sinh có giá trị pháp lý?",
+        "intent": "3_39_4"
+      },
+      {
+        "text": "Việc chia tài sản chung có ảnh hưởng như thế nào đến quyền, nghĩa vụ về tài sản giữa vợ, chồng với người thứ ba?",
+        "intent": "3_40_2"
+      },
+      {
+        "text": "Việc chia tài sản chung của vợ chồng có ảnh hưởng như thế nào đến tài sản riêng của mỗi bên?",
+        "intent": "3_40_1"
+      },
+      {
+        "text": "Thỏa thuận của vợ chồng về việc chia tài sản chung cần phải đáp ứng điều kiện gì?",
+        "intent": "3_40_1"
+      },
+      {
+        "text": "Vợ chồng có quyền thỏa thuận chấm dứt hiệu lực của việc chia tài sản chung sau khi đã thực hiện?",
+        "intent": "3_41_1"
+      },
+      {
+        "text": "Khi thỏa thuận chấm dứt hiệu lực của việc chia tài sản chung có hiệu lực?",
+        "intent": "3_41_2"
+      },
+      {
+        "text": "Quyền, nghĩa vụ về tài sản phát sinh trước thời điểm chấm dứt hiệu lực của việc chia tài sản chung có hiệu lực như thế nào?",
+        "intent": "3_41_3"
+      },
+      {
+        "text": "Trong trường hợp chia tài sản chung theo bản án, quyết định của Tòa án, việc chấm dứt hiệu lực của việc chia tài sản chung cần phải được ai công nhận?",
+        "intent": "3_41_4"
+      },
+      {
+        "text": "Việc chia tài sản chung trong thời kỳ hôn nhân bị vô hiệu khi nào?",
+        "intent": "3_42_1"
+      },
+      {
+        "text": "Trong trường hợp chia tài sản chung bị vô hiệu, việc chia tài sản ảnh hưởng như thế nào đến lợi ích của gia đình?",
+        "intent": "3_42_1"
+      },
+      {
+        "text": "Việc chia tài sản chung trong thời kỳ hôn nhân bị vô hiệu nếu có ý đồ trốn tránh thực hiện những nghĩa vụ nào?",
+        "intent": "3_42_2"
+      },
+      {
+        "text": "Những nghĩa vụ cần tránh khi chia tài sản để việc chia tài sản chung không bị vô hiệu là gì?",
+        "intent": "3_42_2"
+      },
+      {
+        "text": "Tài sản riêng của vợ, chồng bao gồm những loại tài sản nào?",
+        "intent": "3_43_1"
+      },
+      {
+        "text": "Tài sản hình thành từ tài sản riêng của vợ, chồng được coi là tài sản của ai?",
+        "intent": "3_43_2"
+      },
+      {
+        "text": "Vợ, chồng có quyền làm gì đối với tài sản riêng của mình?",
+        "intent": "3_44_1"
+      },
+      {
+        "text": "Trong trường hợp không thể tự quản lý tài sản riêng, vợ, chồng có quyền làm gì?",
+        "intent": "3_44_2"
+      },
+      {
+        "text": "Nghĩa vụ riêng về tài sản của mỗi người được thanh toán từ đâu?",
+        "intent": "3_44_3"
+      },
+      {
+        "text": "Trong trường hợp tài sản riêng là nguồn sống duy nhất của gia đình, quyết định định đoạt tài sản này cần sự đồng ý của ai?",
+        "intent": "3_44_4"
+      },
+      {
+        "text": "Tài sản riêng của vợ, chồng có thể nhập vào tài sản chung không?",
+        "intent": "3_44_4"
+      },
+      {
+        "text": "Tài sản nào thuộc sở hữu riêng của vợ, chồng?",
+        "intent": "3_43_1"
+      },
+      {
+        "text": "Việc quản lý tài sản riêng cần bảo đảm điều gì?",
+        "intent": "3_44_2"
+      },
+      {
+        "text": "Trong trường hợp không thể tự mình quản lý tài sản riêng, vợ, chồng có quyền gì?",
+        "intent": "3_44_2"
+      },
+      {
+        "text": "Vợ, chồng có những nghĩa vụ riêng về tài sản gì?",
+        "intent": "3_45_2"
+      },
+      {
+        "text": "Việc nhập tài sản riêng vào tài sản chung được thực hiện như thế nào?",
+        "intent": "3_46_1"
+      },
+      {
+        "text": "Tài sản nào được nhập vào tài sản chung và có điều kiện cụ thể?",
+        "intent": "3_46_2"
+      },
+      {
+        "text": "Làm thế nào để thực hiện nghĩa vụ liên quan đến tài sản riêng đã nhập vào tài sản chung?",
+        "intent": "3_46_3"
+      },
+      {
+        "text": "Những trường hợp nào khiến việc chia tài sản chung trong thời kỳ hôn nhân trở nên vô hiệu?",
+        "intent": "3_47"
+      },
+      {
+        "text": "Các nghĩa vụ của vợ, chồng phát sinh từ việc chiếm hữu, sử dụng, định đoạt tài sản riêng là gì?",
+        "intent": "3_45_2"
+      },
+      {
+        "text": "Nghĩa vụ riêng về tài sản của vợ, chồng có bao nhiêu mức độ?",
+        "intent": "3_45_1"
+      },
+      {
+        "text": "Làm thế nào để chấm dứt hiệu lực của việc chia tài sản chung trong thời kỳ hôn nhân?",
+        "intent": "3_41_1"
+      },
+      {
+        "text": "Việc chấm dứt hiệu lực của việc chia tài sản chung cần được công nhận bởi cơ quan nào?",
+        "intent": "3_41_4"
+      },
+      {
+        "text": "Tài sản nào thuộc về vợ, chồng sau khi chia tài sản chung trong thời kỳ hôn nhân?",
+        "intent": "3_41_2"
+      },
+      {
+        "text": "Thời điểm nào việc chia tài sản chung trong thời kỳ hôn nhân có hiệu lực?",
+        "intent": "3_39_1"
+      },
+      {
+        "text": "Thỏa thuận xác lập chế độ tài sản của vợ chồng cần tuân theo điều kiện gì?",
+        "intent": "3_47"
+      },
+      {
+        "text": "Nội dung cơ bản của thỏa thuận về chế độ tài sản của vợ chồng bao gồm những điều gì?",
+        "intent": "3_48_1"
+      },
+      {
+        "text": "Khi có vấn đề chưa được thỏa thuận trong chế độ tài sản, áp dụng quy định nào?",
+        "intent": "3_48_2"
+      },
+      {
+        "text": "Vợ chồng có quyền sửa đổi, bổ sung thỏa thuận về chế độ tài sản không?",
+        "intent": "3_49_1"
+      },
+      {
+        "text": "Hình thức sửa đổi, bổ sung nội dung của thỏa thuận về chế độ tài sản được áp dụng theo quy định nào?",
+        "intent": "3_49_2"
+      },
+      {
+        "text": "Thỏa thuận về chế độ tài sản của vợ chồng bị vô hiệu khi nào?",
+        "intent": "3_50_1"
+      },
+      {
+        "text": "Ai chủ trì phối hợp với Viện kiểm sát nhân dân tối cao và Bộ Tư pháp để hướng dẫn việc thi hành quy định về việc vô hiệu hóa thỏa thuận về chế độ tài sản?",
+        "intent": "3_50_2"
+      },
+      {
+        "text": "Thỏa thuận xác lập chế độ tài sản của vợ chồng cần được lập như thế nào?",
+        "intent": "3_47"
+      },
+      {
+        "text": "Nội dung cơ bản của thỏa thuận về chế độ tài sản bao gồm những điều gì?",
+        "intent": "3_48_1"
+      },
+      {
+        "text": "Vợ chồng có quyền sửa đổi, bổ sung thỏa thuận về chế độ tài sản không?",
+        "intent": "3_49_1"
+      },
+      {
+        "text": "Hình thức sửa đổi, bổ sung nội dung của thỏa thuận về chế độ tài sản được áp dụng theo quy định nào?",
+        "intent": "3_49_2"
+      },
+      {
+        "text": "Thỏa thuận về chế độ tài sản của vợ chồng bị vô hiệu khi nào?",
+        "intent": "3_50_1"
+      },
+      {
+        "text": "Ai chủ trì phối hợp với Viện kiểm sát nhân dân tối cao và Bộ Tư pháp để hướng dẫn việc thi hành quy định về việc vô hiệu hóa thỏa thuận về chế độ tài sản?",
+        "intent": "3_50_2"
+      },
+      {
+        "text": "Chồng hạ thấp danh dự, nhân phẩm và uy tín của vợ trước đám đông có phải vi phạm luật hôn nhân và gia đình không?",
+        "intent": "3_21"
+      },
+      {
+        "text": "Vợ, chồng có cần sống chung với nhau không?",
+        "intent": "3_19"
+      },
+      {
+        "text": "Chồng có được quyền đánh đập vợ hoặc ngoại tình hay không?",
+        "intent": "3_19"
+      },
+      {
+        "text": "Vợ chồng có cần phải chia sẻ công việc nhà cho nhau không?",
+        "intent": "3_19"
+      },
+      {
+        "text": "Vợ chồng có được ở chung nhà với cha mẹ vợ hoặc cha mẹ chồng hay không?",
+        "intent": "3_20"
+      },
+      {
+        "text": "Chồng có bắt ép vợ phải theo tôn giáo, tín ngưỡng của bản thân hay không?",
+        "intent": "3_22"
+      },
+      {
+        "text": "Sau khi kết hôn vợ, chồng có được tiếp tục học lên cao nữa không?",
+        "intent": "3_23"
+      },
+      {
+        "text": "Sau khi kết hôn vợ, chồng có được tiếp tục tham gai vào các hoạt động chính trị, xã hội hoặc các chương trình xã hội hay không?",
+        "intent": "3_23"
+      },
+      {
+        "text": "Vợ chồng có được giúp đỡ nhau trong công việc hay không?",
+        "intent": "3_23"
+      },
+      {
+        "text": "Căn cứ xác lập đại diện giữa vợ và chồng được pháp luật quy định như thế nào?",
+        "intent": "3_24"
+      },
+      {
+        "text": "Trong trường hợp vợ, chồng kinh doanh chung thì vợ, chồng trực tiếp tham gia quan hệ kinh doanh thì có được đại diện cho nhau không?",
+        "intent": "3_25_1"
+      },
+      {
+        "text": "Trong trường hợp vợ, chồng đưa tài sản chung vào kinh doanh thì áp dụng quy định nào?",
+        "intent": "3_25_2"
+      },
+      {
+        "text": "Trong trường hợp trước khi tham gia quan hệ kinh doanh, vợ chồng có thỏa thuận khác thì các luật liên quan có quy định khác không?",
+        "intent": "3_25_1"
+      },
+      {
+        "text": "Việc đại diện giữa vợ và chồng trong việc xác lập, thực hiện và chấm dứt giao dịch có liên quan đến tài sản chung không?",
+        "intent": "3_26_1"
+      },
+      {
+        "text": "Trong trường hợp vợ hoặc chồng có tên trên giấy chứng nhận quyền sở hữu, giấy chứng nhận quyền sử dụng tài sản tự mình xác lập có xuất hiện của người thứ ba trái với quy định về đại diện vợ và chồng, theo quy định thì giao dịch sẽ như thế nào?",
+        "intent": "3_26_2"
+      },
+      {
+        "text": "Vợ, chồng chịu trách nhiệm liên đới với giao dịch do một bên thực hiện quy định nào?",
+        "intent": "3_27_1"
+      },
+      {
+        "text": "Vợ, chồng chịu trách nhiệm liên đới với giao dịch do một bên thực hiện quy định ngoài khoản 1 Điều 30 thì giao dịch còn phù hợp với quy định khác nào?",
+        "intent": "3_27_1"
+      },
+      {
+        "text": "Vợ, chồng chịu trách nhiệm liên đới về các nghĩa vụ theo quy định nào?",
+        "intent": "3_27_2"
+      },
+      {
+        "text": "Về tài sản gia đình, vợ chồng có quyền lựa chọn áp dụng chế độ tài sản nào?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Chế độ tài sản của vợ chồng theo luật định là gì?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Theo luật định, chế độ tài sản của vợ chồng được thực hiện theo quy định nào?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Chế độ tài sản của vợ chồng theo thỏa thuận được thực hiện theo quy định nào?",
+        "intent": "3_28_1"
+      },
+      {
+        "text": "Chế độ tài sản mà vợ chồng đã lựa chọn có phụ thuộc vào quy định nào không?",
+        "intent": "3_28_2"
+      },
+      {
+        "text": "Chính phủ có quy định chi tiết về chế độ tài sản của vợ chồng không?",
+        "intent": "3_28_3"
+      },
+      {
+        "text": "Nguyên tắc chung về chế độ tài sản của vợ chồng là như thế nào?",
+        "intent": "3_29_1"
+      },
+      {
+        "text": "Vợ, chồng có nghĩa vụ gì để đáp ứng nhu cầu thiết yếu của gia đình?",
+        "intent": "3_29_2"
+      },
+      {
+        "text": "Vợ, chồng có nghĩa vụ đảm bảo điều kiện để làm gì?",
+        "intent": "3_29_2"
+      },
+      {
+        "text": "Hành vi xâm phạm đến quyền và lợi ích hợp pháp của vợ chồng,gia đình và của người khác sẽ được pháp luật xử lý ra sao?",
+        "intent": "3_29_3"
+      },
+      {
+        "text": "Vợ, chồng có quyền và nghĩa vụ thực hiện giao dịch nhằm để làm gì?",
+        "intent": "3_30_1"
+      },
+      {
+        "text": "Trong trường hợp vợ chồng đang cạn kiệt kinh phí chung của gia đình,theo quy luật hai bên có nghĩa vụ phải làm gì?",
+        "intent": "3_30_2"
+      },
+      {
+        "text": "Trong việc tài sản chung của gia đình, vợ chồng có cần thiết phải đóng góp tài sản riêng vào hay không?",
+        "intent": "3_30_2"
+      },
+      {
+        "text": "Giao dịch liên quan đến nhà là nơi ở duy nhất của vợ chồng phải có sự thỏa thuận của ai?",
+        "intent": "3_31"
+      },
+      {
+        "text": "Về việc nhà ở thuộc quyền sở hữu riêng của vợ hoặc chồng thì chủ sở hữu giao dịch như thế nào?",
+        "intent": "3_31"
+      },
+      {
+        "text": "Về việc nhà ở thuộc quyền sở hữu riêng của vợ hoặc chồng thì chủ sở hữu giao dịch cần phải đảm bảo điều gì?",
+        "intent": "3_31"
+      },
+      {
+        "text": "Trong giao dịch với người thứ ba ngay tình thì vợ,chồng là người đứng tên tài khoản ngân hàng, tài khoản chứng khoán thì như thế nào liên quan đến tài sản đó?",
+        "intent": "3_32_1"
+      },
+      {
+        "text": "Khi giao dịch với người thứ ba ngay tình thì vợ, chồng đang chiếm hữu động sản theo quy định của pháp luật sẽ được như thế nào?",
+        "intent": "3_32_2"
+      },
+      {
+        "text": "Tài sản chung của vợ chồng gồm những gì?",
+        "intent": "3_33_1"
+      },
+      {
+        "text": "Ở Điều 33 khoản 1, tài sản chung của vợ chồng trừ những trường hợp nào?",
+        "intent": "3_33_1"
+      },
+      {
+        "text": "Tài sản chung của vợ chồng thuộc sở hữu chung hợp nhất được dùng vào mục đích gì?",
+        "intent": "3_33_2"
+      },
+      {
+        "text": "Trường hợp vợ, chồng đang  tranh chấp tài sản riêng của mỗi bên nhưng không có căn cứ để chứng minh tài sản thì sẽ quyết định như thế nào?",
+        "intent": "3_33_3"
+      },
+      {
+        "text": "Quyền sở hữu và quyền sử dụng với tài sản chung của vợ chồng phải đăng kí như thế nào?",
+        "intent": "3_34_1"
+      },
+      {
+        "text": "Giấy chứng nhận quyền sở hữu và sử dụng tài sản chỉ ghi tên của vợ thì như thế nào?",
+        "intent": "3_34_2"
+      },
+      {
+        "text": "Việc sử dụng và định đoạt tài sản chung do ai quyết định?",
+        "intent": "3_35_1"
+      },
+      {
+        "text": "AI có quyền sử dụng tài sản chung của vợ chồng?",
+        "intent": "3_35_1"
+      },
+      {
+        "text": "Định đoạt tài sản chung của hai vợ chồng ai có quyền?",
+        "intent": "3_35_1"
+      },
+      {
+        "text": "Khi cần định đoạt bất động sản khi thỏa thuận với nhau hai vợ chồng như thế nào?",
+        "intent": "3_35_2"
+      },
+      {
+        "text": "Nếu tài sản chung của hai vợ chồng đã thỏa thuận thì quyền được quy định như thế nào?",
+        "intent": "3_36"
+      },
+      {
+        "text": "Khi tài sản chung mà vợ chồng thỏa thuận với nhau đưa vào kinh doanh cần chuẩn bị gì?",
+        "intent": "3_36"
+      },
+      {
+        "text": "Vợ chồng có thể chia tài sản chung được không?",
+        "intent": "3_38_1"
+      },
+      {
+        "text": "Khi thỏa thuận chia tài sản chung vợ chồng phải làm gì khi thỏa thuận?",
+        "intent": "3_38_2"
+      },
+      {
+        "text": "Có thể yêu cầu Tòa án giải quyết chia tài sản chung của vợ chồng được không?",
+        "intent": "3_38_3"
+      },
+      {
+        "text": "Thời điểm hiệu lực khi chia tài sản chung của vợ chồng được tính khi nào?",
+        "intent": "3_39_1"
+      },
+      {
+        "text": "Nếu Tòa án chia tài sản chung của vợ chồng thì được tính khi nào?",
+        "intent": "3_39_3"
+      },
+      {
+        "text": "Quyền và nghĩa vụ về tài sản của vợ chồng với người thứ ba trước thời điểm chia tài sản chung như thế nào?",
+        "intent": "3_39_4"
+      },
+      {
+        "text": "Khi chia tài sản chung của vợ chồng thì lợi nhuận phát sinh được tính như thế nào?",
+        "intent": "3_40_1"
+      },
+      {
+        "text": "Khi chia tài sản chung của vợ chồng đã thỏa thuận thì lợi nhuận phát sinh với người thứ ba được tính như thế nào?",
+        "intent": "3_40_2"
+      },
+      {
+        "text": "Một thời gian khi chia tài sản chung có thể hủy việc chia được không?",
+        "intent": "3_41_1"
+      },
+      {
+        "text": "Tài sản được tính như thế nào sau khi hủy hiệu lực của chia tài sản chung của vợ chồng?",
+        "intent": "3_41_2"
+      },
+      {
+        "text": "Quyền, nghĩa vụ tài sản phát sinh trước thời điểm chấm dứt chia tài sản như thế nào?",
+        "intent": "3_41_3"
+      },
+      {
+        "text": "Việc phân chia tài sản chung do Tòa án quyết định thì khi chấm dứt hiệu lực phải như thế nào?",
+        "intent": "3_41_4"
+      },
+      {
+        "text": "Khi nào chia tài sản chung của vợ chồng bị vô hiệu?",
+        "intent": "3_42_1"
+      },
+      {
+        "text": "Tài sản riêng của vợ, chồng được tính như thế nào?",
+        "intent": "3_43_1"
+      },
+      {
+        "text": "Lợi nhuận từ tài sản riêng được tính như thế nào?",
+        "intent": "3_43_2"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}

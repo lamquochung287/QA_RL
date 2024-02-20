@@ -48,7 +48,7 @@ class evaluate(object):
                     print('gold_intent:', gold)
                     print('success:', success)
 
- 
+
         print('#### End of evaluation #######')
         success_rate =  float(success)/float(num_utt)       
         print('Success Rate:', success_rate, success, num_utt)

@@ -2,7 +2,7 @@
 
 from unittest import TestCase
 
-from underthesea.datasets.stopwords import stopwords
+from underthesea.datasets import stopwords
 
 
 class TestDictionary(TestCase):
