@@ -20,42 +20,42 @@ class rasa():
         Return: message, intent, confidence
     """
     
-    def __init__(self, params, intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file=''):
+    def __init__(self, params, intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", isTest = False):
         """ Load rasa config from config files and train NLU """
 
         
-        # do first training
-        self.params = params
-        self.intents = intents
-        self.config_file = config_file
+        if isTest == False:
+            # do first training
+            self.params = params
+            self.intents = intents
+            self.config_file = config_file
 
-        self.no_intent = 'No intent detected'
-        self.cl_threshold = 0.1
+            self.no_intent = 'No intent detected'
+            self.cl_threshold = 0.1
 
         # initial training data
         # with open(training_file, 'r', encoding='utf-8') as f:
         #     self.training_dict = json.load(f)
-            
-        df_location = multiple_data_location(params, file_path='training_path', file_type='training_file')
-        self.training_dict = read_multiple_files(df_location, 'json')
+            # df_location = multiple_data_location(params, file_path='training_path', file_type='training_file')
+            # self.training_dict = read_multiple_files(df_location, 'json')
 
-        training_data_init = load_data(params['training_path'])
-        self.training_dir = params['training_path']
+            training_data_init = load_data(params['training_path'])
+            self.training_dir = params['training_path']
 
-        self.training_data = training_data_init
-        # self.temp_training_file = self.training_dir + '/all_chapter_Datatraining_tmp.json'
-        # print('Training temp directory: ', self.temp_training_file)
-        # self.training_file = df_location
-        # for training_location in self.training_file:           
-        #     if training_location != self.temp_training_file:
-        #         shutil.copy(self.training_file, self.temp_training_file)
+            self.training_data = training_data_init
+            # self.temp_training_file = self.training_dir + '/all_chapter_Datatraining_tmp.json'
+            # print('Training temp directory: ', self.temp_training_file)
+            # self.training_file = df_location
+            # for training_location in self.training_file:           
+            #     if training_location != self.temp_training_file:
+            #         shutil.copy(self.training_file, self.temp_training_file)
 
-        # training
-        self.train()
-        print('Training in rasa done !')
+            # training
+            self.train()
+            print('Training in rasa done !')
 
-        # init rasa interpreter, which is used for prediction
-        self.interpreter = Interpreter.load(self.model_directory)
+            # init rasa interpreter, which is used for prediction
+            self.interpreter = Interpreter.load(self.model_directory)
 
     def train(self):
         """ Train NLU """

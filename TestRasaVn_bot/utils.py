@@ -17,6 +17,9 @@ def parameters():
                             'chapter07.csv','chapter08.csv','chapter09.csv']
     
     config['training_path'] = './data/training'
+    config['training_path_part1'] = './data/training/part_1'
+    config['training_path_part2'] = './data/training/part_2'
+    config['training_path_part3'] = './data/training/part_3'
     config['training_file'] = ['chapter01_data_training.json','chapter02_data_training.json','chapter03_data_training.json',
                             'chapter04_data_training.json','chapter05_data_training.json','chapter06_data_training.json',
                             'chapter07_data_training.json','chapter08_data_training.json','chapter09_data_training.json']
@@ -41,7 +44,7 @@ def parameters():
     config['epsilon_epoch_f'] = 20  
     # config['dqn_hidden_size'] = 64 #paramter of DQN
     config['gamma'] = 0.9 #paramter of DQN 
-    config['prob_no_intent'] = 0.3 #probability of giving 'No intent detected" in random policy
+    config['prob_no_intent'] = 0.2 #probability of giving 'No intent detected" in random policy
     # config['buffer_size'] = 20000 # max size of experience replay buffer 
     
     # some config to set special params to save sumary's title file for more detail
@@ -53,10 +56,10 @@ def parameters():
     config['numInterOfAgentTrainWarmup_numIter'] = 10
     config['numInterOfAgentTrainWarmup_miniBatches'] = False
     # numInterOfAgentDQNTraining 
-    config['numInterOfAgentDQNTraining_batchSize'] = 30
-    config['numInterOfAgentDQNTraining_numBatches'] = 50
-    config['numInterOfAgentDQNTraining_numIter'] = 10
-    config['numInterOfAgentDQNTraining_miniBatches'] = True
+    config['numInterOfAgentDQNTraining_batchSize'] = 10
+    config['numInterOfAgentDQNTraining_numBatches'] = 30
+    config['numInterOfAgentDQNTraining_numIter'] = 20
+    config['numInterOfAgentDQNTraining_miniBatches'] = False
     # dqnHiddenSize
     config['dqn_hidden_size'] = 64
     # numOfEpisodes
@@ -70,7 +73,7 @@ def config_score_model():
     """ configuration for score model """
     
     params = {}
-    params['epochs'] = 30 # when do 50 epochs, in epoch 10-20-30-40 have same as loss and train acc, so try 30 is fit
+    params['epochs'] = 40 # when do 50 epochs, in epoch 10-20-30-40 have same as loss and train acc, so try 30 is fit
     params['lr'] = 1.e-4
     params['l2_reg'] = 0.1
     params['print_freq'] = 10

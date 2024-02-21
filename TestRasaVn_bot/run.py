@@ -115,4 +115,10 @@ d = params['dqn_hidden_size']
 e = params['num_episodes']
 f = params['buffer_size']
 
+# pls when use small part of training_path, fill this what chapter allow to train
+# ex: custom = "123" or "part1"
+custom = ""
+
+if custom != "":
+        results.to_csv(f'summary_chapter{custom}_{a}_{b1}{b2}{b3}{b4}_{c1}{c2}{c3}{c4}_{d}_{e}_{f}.csv', index=False)
 results.to_csv(f'summary_{a}_{b1}{b2}{b3}{b4}_{c1}{c2}{c3}{c4}_{d}_{e}_{f}.csv', index=False)
