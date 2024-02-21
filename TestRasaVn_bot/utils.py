@@ -12,27 +12,35 @@ def parameters():
     config = {}
     
     config['data_path'] = './data/main'
-    config['data_file'] = ['chapter01.csv','chapter02.csv','chapter03.csv',]
-                            # 'chapter04.csv','chapter05.csv','chapter06.csv',
-                            # 'chapter07.csv','chapter08.csv','chapter09.csv']
+    config['data_file'] = [
+        'chapter01.csv','chapter02.csv','chapter03.csv',
+        # 'chapter04.csv','chapter05.csv','chapter06.csv',
+        # 'chapter07.csv','chapter08.csv','chapter09.csv',
+        ]
     
     config['training_path'] = './data/training'
     config['training_path_part1'] = './data/training/part_1'
     config['training_path_part2'] = './data/training/part_2'
     config['training_path_part3'] = './data/training/part_3'
-    config['training_file'] = ['chapter01_data_training.json','chapter02_data_training.json','chapter03_data_training.json',]
-                            # 'chapter04_data_training.json','chapter05_data_training.json','chapter06_data_training.json',
-                            # 'chapter07_data_training.json','chapter08_data_training.json','chapter09_data_training.json']
+    config['training_file'] = [
+        'chapter01_data_training.json','chapter02_data_training.json','chapter03_data_training.json',
+        # 'chapter04_data_training.json','chapter05_data_training.json','chapter06_data_training.json',
+        # 'chapter07_data_training.json','chapter08_data_training.json','chapter09_data_training.json',
+        ]
     
     config['intent_response_path'] = './data/intent_response'
-    config['intent_response_file'] = ['chapter01_intent_response.csv','chapter02_intent_response.csv','chapter03_intent_response.csv',]
-                            # 'chapter04_intent_response.csv','chapter05_intent_response.csv','chapter06_intent_response.csv',
-                            # 'chapter07_intent_response.csv','chapter08_intent_response.csv','chapter09_intent_response.csv']
+    config['intent_response_file'] = [
+        'chapter01_intent_response.csv','chapter02_intent_response.csv','chapter03_intent_response.csv',
+        # 'chapter04_intent_response.csv','chapter05_intent_response.csv','chapter06_intent_response.csv',
+        # 'chapter07_intent_response.csv','chapter08_intent_response.csv','chapter09_intent_response.csv',
+        ]
     
     config['test_path'] = './data/test'
-    config['test_file'] = ['chapter01_test_set.csv','chapter02_test_set.csv','chapter03_test_set.csv',]
-                            # 'chapter04_test_set.csv','chapter05_test_set.csv','chapter06_test_set.csv',
-                            # 'chapter07_test_set.csv','chapter08_test_set.csv','chapter09_test_set.csv']
+    config['test_file'] = [
+        'chapter01_test_set.csv','chapter02_test_set.csv','chapter03_test_set.csv',
+        # 'chapter04_test_set.csv','chapter05_test_set.csv','chapter06_test_set.csv',
+        # 'chapter07_test_set.csv','chapter08_test_set.csv','chapter09_test_set.csv',
+        ]
     
     config['nlu'] = 'rasa' #either watson or rasa
     config['num_episodes_warm'] = 10 # should be similar to number of conversations 
