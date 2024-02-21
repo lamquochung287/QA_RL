@@ -36,11 +36,11 @@ class rasa():
         # initial training data
         # with open(training_file, 'r', encoding='utf-8') as f:
         #     self.training_dict = json.load(f)
-            # df_location = multiple_data_location(params, file_path='training_path', file_type='training_file')
-            # self.training_dict = read_multiple_files(df_location, 'json')
+            df_location = multiple_data_location(params, file_path='training_path_part1', file_type='training_file')
+            self.training_dict = read_multiple_files(df_location, 'json')
 
-            training_data_init = load_data(params['training_path'])
-            self.training_dir = params['training_path']
+            training_data_init = load_data(params['training_path_part1'])
+            self.training_dir = params['training_path_part1']
 
             self.training_data = training_data_init
             # self.temp_training_file = self.training_dir + '/all_chapter_Datatraining_tmp.json'
