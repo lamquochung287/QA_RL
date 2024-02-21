@@ -96,11 +96,11 @@ results.to_csv('summary.csv', index=False)
 
 end = time.perf_counter()
 second_final = end - start
-time_running = datetime.timedelta(seconds=second_final)
+time_running = second_final / 3600
 print(time_running)
 
-time_running_obj = dt.strptime(time_running, "%H:%M:%S.%f")
-params['time_running'] = f'{str(time_running_obj.hour)}h'
+params['time_running'] = f'{str(time_running)}h'
+print(params['time_running'])
 
 a = params['time_running']
 b1 = params['numInterOfAgentTrainWarmup_batchSize']
