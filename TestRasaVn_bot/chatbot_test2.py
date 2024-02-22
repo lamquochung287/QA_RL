@@ -2,7 +2,6 @@
 import numpy as np
 from utils import multiple_data_location
 from utils import read_multiple_files
-from utils import parameters
 from deep_dialog.qlearning import DQN
 from deep_dialog.nlu.rasa import rasa
 from deep_dialog.nlu.rasa import Interpreter
@@ -44,7 +43,7 @@ def state_to_dict(df):
 
 def actions_to_dict(training_dict, no_intent):
 
-    print('Creating action to index mapping')
+    # print('Creating action to index mapping')
 
     count = 0
     map_index2action = {}
@@ -69,42 +68,40 @@ def actions_to_dict(training_dict, no_intent):
         
     return map_index2action, map_action2index
 
-
-
-###############################################################
-# def get_representation(question, map_state2index):
-#     """ return one-hot representation of the given sentence """
-    
-#     size = len(map_state2index)
-#     index_question = map_state2index[question]
-#     rep = np.zeros((1,size))
-#     rep[0, index_question] = 1.0
-
-#     return rep
 def get_representation(question, map_state2index):
-    """
-    Return a one-hot representation of the given sentence.
+    """ return one-hot representation of the given sentence """
 
-    Args:
-        question (str): The input sentence.
+    size = len(map_state2index)
+    index_question = map_state2index[question]
+    rep = np.zeros((1,size))
+    rep[0, index_question] = 1.0
 
-    Returns:
-        np.ndarray: The one-hot representation of the sentence.
-    """
-    # Extract unique words from the question and create a mapping
-    unique_words = sorted(set(question.split()))
-    map_word2index = {word: i for i, word in enumerate(unique_words)}
+    return rep
 
-    # Determine the size of the representation based on the number of unique words
-    # size = len(unique_words)
-    size = len(map_state2index) 
+# def get_representation(question, map_state2index):
+#     """
+#     Return a one-hot representation of the given sentence.
+
+#     Args:
+#         question (str): The input sentence.
+
+#     Returns:
+#         np.ndarray: The one-hot representation of the sentence.
+#     """
+#     # Extract unique words from the question and create a mapping
+#     unique_words = sorted(set(question.split()))
+#     map_word2index = {word: i for i, word in enumerate(unique_words)}
+
+#     # Determine the size of the representation based on the number of unique words
+#     # size = len(unique_words)
+#     size = len(map_state2index) 
     
-    # Create the one-hot representation
-    representation = np.zeros((1, size))
-    for word in question.split():
-        representation[0, map_word2index[word]] = 1.0
+#     # Create the one-hot representation
+#     representation = np.zeros((1, size))
+#     for word in question.split():
+#         representation[0, map_word2index[word]] = 1.0
 
-    return representation
+#     return representation
 
 def load_trained_DQN(path):
     """ Load trained model from pickle file """
@@ -113,67 +110,68 @@ def load_trained_DQN(path):
     model = trained_file['model']
 
     print(f'DQN loaded from file: {path}')
-    # print()
     
     return model
     
+    
 ###################################
-def softmax(x, tau=1.0):
-    """Compute softmax values for each value in x."""
-    e_x = np.exp((x - np.max(x)) / tau)
-    return e_x / e_x.sum()
+# def softmax(x, tau=1.0):
+#     """Compute softmax values for each value in x."""
+#     e_x = np.exp((x - np.max(x)) / tau)
+#     return e_x / e_x.sum()
 
-def softmax_action_selection(action_values, temperature=1.0):
-    """Select action based on softmax action selection."""
-    probabilities = softmax(action_values / temperature)
-    action = np.random.choice(len(probabilities), p=probabilities)
-    return action
+# def softmax_action_selection(action_values, temperature=1.0):
+#     """Select action based on softmax action selection."""
+#     probabilities = softmax(action_values / temperature)
+#     action = np.random.choice(len(probabilities), p=probabilities)
+#     return action
 
-def update_epsilon(min_epsilon, epsilon, epsilon_decay):
-        """Update the exploration rate (epsilon) based on the decay schedule."""
-        return max(min_epsilon, epsilon * epsilon_decay)
+# def update_epsilon(min_epsilon, epsilon, epsilon_decay):
+#         """Update the exploration rate (epsilon) based on the decay schedule."""
+#         return max(min_epsilon, epsilon * epsilon_decay)
         
-def run_policy_DQN(dqn, representation, cfgs, num_actions, return_q=False):
-    """Epsilon-greedy policy with a decaying exploration rate."""
-    gamma = cfgs['gamma']
-    epsilon_initial = cfgs['epsilon_initial']
-    min_epsilon = cfgs['min_epsilon']
-    epsilon_decay = cfgs['epsilon_decay']
+# def run_policy_DQN(dqn, representation, cfgs, num_actions, return_q=False):
+#     """Epsilon-greedy policy with a decaying exploration rate."""
+#     gamma = cfgs['gamma']
+#     epsilon_initial = cfgs['epsilon_initial']
+#     min_epsilon = cfgs['min_epsilon']
+#     epsilon_decay = cfgs['epsilon_decay']
     
-    epsilon = update_epsilon(min_epsilon, epsilon_initial, epsilon_decay)
+#     epsilon = update_epsilon(min_epsilon, epsilon_initial, epsilon_decay)
     
-    if np.random.rand() < epsilon:
-        # Exploration: choose a random action
-        action = np.random.randint(num_actions)
-    else:
-        # Exploitation: choose the action with the highest Q-value
-        action = dqn.predict(representation, {'gamma': gamma}, predict_model=True)
+#     if np.random.rand() < epsilon:
+#         # Exploration: choose a random action
+#         action = np.random.randint(num_actions)
+#     else:
+#         # Exploitation: choose the action with the highest Q-value
+#         action = dqn.predict(representation, {'gamma': gamma}, predict_model=True)
         
-    # if return_q:
-    #     # Optionally return Q-values for the chosen action
-    #     q_value = dqn.predict(representation, {'gamma': gamma}, predict_model=True, return_q=True)
-    #     return action, q_value
-    # else:
-    return action
-
-
+#     # if return_q:
+#     #     # Optionally return Q-values for the chosen action
+#     #     q_value = dqn.predict(representation, {'gamma': gamma}, predict_model=True, return_q=True)
+#     #     return action, q_value
+#     # else:
+#     return action
 #######################################
-# def run_policy_DQN(dqn, representation, return_q=False):
-#     """ epsilon-greedy policy """
 
-#     return dqn.predict(representation, {'gamma': 0.9}, predict_model=True, return_q=return_q)
+
+def run_policy_DQN(dqn, representation, cfgs, num_actions, return_q=False):
+    """ epsilon-greedy policy """
+
+    return dqn.predict(representation, {'gamma': 0.9}, predict_model=True, return_q=return_q)
             
 def rule_policy_NLU(nlu, user_question):
 
     return nlu.predict(user_question)
 
-def predict_NLU(nlu, user_question, mapping, cl_threshold):
+def predict_NLU(nlu, user_question, mapping, cfgs):
     """ predict action (with confidence) given a state (utterance) """
     
     result = nlu.interpreter.parse(user_question)
     intent = result['intent']['name']
     confidence = result['intent']["confidence"]
 
+    cl_threshold = cfgs['cl_threshold']
     if confidence < cl_threshold:
         intent = 'No intent detected'
         confidence = 1.-confidence
@@ -182,7 +180,6 @@ def predict_NLU(nlu, user_question, mapping, cl_threshold):
     answers = [map_action2answer.loc[map_action2answer['intent'] == intent]['answer'].values[0]]
         
     return answers, intent
-####################################################
 
 def load_data(params):    
     
@@ -202,8 +199,6 @@ def load_data(params):
 
 def get_intents(df, remove_fallback=True):
     """ This function selects the max_num_intents intents more frequently triggered by the users and return dataframe with these intents only"""
-
-    # df_feedback = get_df_feedback(df)
 
     intents = list(df['intent'])
     unique_intents = list(set(intents))
@@ -232,8 +227,6 @@ def get_intents(df, remove_fallback=True):
 
     return df_intents
 
-#######################################################    
-
 def set_mapping(params):
     
     df = load_data(params)
@@ -247,7 +240,7 @@ def set_mapping(params):
     
     return get_mapping(training_dict, no_intent, df, map_action2answer)
 
-# def chatbot_response(user_question, mapping, dqn):  # sourcery skip: avoid-builtin-shadow
+# def chatbot_response(user_question, mapping, dqn, cfgs, num_actions):  # sourcery skip: avoid-builtin-shadow
 
 #     # print('state2index: ',mapping['state2index'])
 #     map_state2index = mapping['state2index']
@@ -255,7 +248,7 @@ def set_mapping(params):
         
 #         repr = get_representation(user_question, map_state2index)
 
-#         index_action = run_policy_DQN(dqn, repr)
+#         index_action = run_policy_DQN(dqn, repr, cfgs, num_actions)
 
 #         map_index2action = mapping['index2action']
 #         map_action2answer = mapping['action2answer']
@@ -288,7 +281,6 @@ def chatbot_response(user_question, mapping, dqn, cfgs, num_actions):  # sourcer
 
     return "I have no idea", index_action
 
-####################################################
 def read_dqn_model():
     file_paths = [f'./models/20240219/agt_{i}.p' for i in range(9) if Path(f'./models/20240219/agt_{i}.p').is_file()]
     model_params_list = [load_trained_DQN(file_path) for file_path in file_paths]
@@ -319,6 +311,66 @@ def config():
     
     return cfgs
     
+def parameters():
+    """ configuration for RL agent """
+    
+    config = {
+        'data_path': './data/main',
+        'data_file': [
+            'chapter01.csv',
+            'chapter02.csv',
+            'chapter03.csv',
+            'chapter04.csv',
+            'chapter05.csv',
+            'chapter06.csv',
+            'chapter07.csv',
+            'chapter08.csv',
+            'chapter09.csv',
+        ],
+        'training_path': './data/training',
+        'training_path_test1': './data/training/test_1',
+        'training_path_part1': './data/training/part_1',
+        'training_path_part2': './data/training/part_2',
+        'training_path_part3': './data/training/part_3',
+        'training_file': [
+            'chapter01_data_training.json',
+            'chapter02_data_training.json',
+            'chapter03_data_training.json',
+            'chapter04_data_training.json',
+            'chapter05_data_training.json',
+            'chapter06_data_training.json',
+            'chapter07_data_training.json',
+            'chapter08_data_training.json',
+            'chapter09_data_training.json',
+        ],
+        'intent_response_path': './data/intent_response',
+        'intent_response_file': [
+            'chapter01_intent_response.csv',
+            'chapter02_intent_response.csv',
+            'chapter03_intent_response.csv',
+            'chapter04_intent_response.csv',
+            'chapter05_intent_response.csv',
+            'chapter06_intent_response.csv',
+            'chapter07_intent_response.csv',
+            'chapter08_intent_response.csv',
+            'chapter09_intent_response.csv',
+        ],
+        'test_path': './data/test',
+        'test_file': [
+            'chapter01_test_set.csv',
+            'chapter02_test_set.csv',
+            'chapter03_test_set.csv',
+            'chapter04_test_set.csv',
+            'chapter05_test_set.csv',
+            'chapter06_test_set.csv',
+            'chapter07_test_set.csv',
+            'chapter08_test_set.csv',
+            'chapter09_test_set.csv',
+        ],
+    }
+
+    return config
+
 def chat_bot():
     
     cfgs = config()
@@ -331,8 +383,11 @@ def chat_bot():
 
     rasa_NLU = set_nlu_model(cfgs)
 
+    print()
+    print("====================================================")
     print("Chatbot: Hi! How can I help you today?")
     while True:
+        print()
         user_question = input("You: ")
         if user_question.lower() == 'exit':
             print("Chatbot: Goodbye!")
@@ -340,6 +395,7 @@ def chat_bot():
         response, intent_DQN  = chatbot_response(user_question, mapping, dqn, cfgs, num_actions)
         response2, intent_predict_NLU = predict_NLU(rasa_NLU, user_question, mapping, cfgs)
         response3, intent_rule_NLU, confi = rule_policy_NLU(rasa_NLU, user_question)
+        print()
         print(f"Chatbot_DQN: {response} /// {intent_DQN}")
         print()
         print(f"Chatbot_NLU: {response2} /// {intent_predict_NLU}")
