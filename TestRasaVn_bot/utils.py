@@ -71,7 +71,7 @@ def parameters():
     # dqnHiddenSize
     config['dqn_hidden_size'] = 64
     # numOfEpisodes
-    config['num_episodes'] = 50
+    config['num_episodes'] = 100
     # bufferSize
     config['buffer_size'] = 20000
     
