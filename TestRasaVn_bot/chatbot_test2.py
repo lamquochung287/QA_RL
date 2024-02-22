@@ -240,46 +240,46 @@ def set_mapping(params):
     
     return get_mapping(training_dict, no_intent, df, map_action2answer)
 
-# def chatbot_response(user_question, mapping, dqn, cfgs, num_actions):  # sourcery skip: avoid-builtin-shadow
-
-#     # print('state2index: ',mapping['state2index'])
-#     map_state2index = mapping['state2index']
-#     if user_question in map_state2index:
-        
-#         repr = get_representation(user_question, map_state2index)
-
-#         index_action = run_policy_DQN(dqn, repr, cfgs, num_actions)
-
-#         map_index2action = mapping['index2action']
-#         map_action2answer = mapping['action2answer']
-#         # print('index2action: ',map_index2action)
-#         # print('action2answer: ',map_action2answer)
-
-#         if index_action in map_index2action:
-#             answers = [map_action2answer.loc[map_action2answer['intent'] == map_index2action[index_action]]['answer'].values[0]]
-#             print('-------answers: ', answers)
-            
-#             return map_index2action[index_action]
-        
-#     return "I have no idea"
-
 def chatbot_response(user_question, mapping, dqn, cfgs, num_actions):  # sourcery skip: avoid-builtin-shadow
-    
+
+    # print('state2index: ',mapping['state2index'])
     map_state2index = mapping['state2index']
-    repr = get_representation(user_question, map_state2index)
+    if user_question in map_state2index:
+        
+        repr = get_representation(user_question, map_state2index)
 
-    index_action = run_policy_DQN(dqn, repr, cfgs, num_actions)
+        index_action = run_policy_DQN(dqn, repr, cfgs, num_actions)
 
-    map_index2action = mapping['index2action']
-    map_action2answer = mapping['action2answer']
+        map_index2action = mapping['index2action']
+        map_action2answer = mapping['action2answer']
+        # print('index2action: ',map_index2action)
+        # print('action2answer: ',map_action2answer)
 
-    if index_action in map_index2action:
-        answers = [map_action2answer.loc[map_action2answer['intent'] == map_index2action[index_action]]['answer'].values[0]]
-        # print('-------answers: ', answers)
+        if index_action in map_index2action:
+            answers = [map_action2answer.loc[map_action2answer['intent'] == map_index2action[index_action]]['answer'].values[0]]
+            # print('-------answers: ', answers)
+            
+            return answers, map_index2action[index_action]
 
-        return answers, map_index2action[index_action]
+    return "I have no idea", 0
 
-    return "I have no idea", index_action
+# def chatbot_response(user_question, mapping, dqn, cfgs, num_actions):  # sourcery skip: avoid-builtin-shadow
+    
+#     map_state2index = mapping['state2index']
+#     repr = get_representation(user_question, map_state2index)
+
+#     index_action = run_policy_DQN(dqn, repr, cfgs, num_actions)
+
+#     map_index2action = mapping['index2action']
+#     map_action2answer = mapping['action2answer']
+
+#     if index_action in map_index2action:
+#         answers = [map_action2answer.loc[map_action2answer['intent'] == map_index2action[index_action]]['answer'].values[0]]
+#         # print('-------answers: ', answers)
+
+#         return answers, map_index2action[index_action]
+
+#     return "I have no idea", index_action
 
 def read_dqn_model():
     file_paths = [f'./models/20240219/agt_{i}.p' for i in range(9) if Path(f'./models/20240219/agt_{i}.p').is_file()]
@@ -387,7 +387,7 @@ def chat_bot():
     print("====================================================")
     print("Chatbot: Hi! How can I help you today?")
     while True:
-        print()
+        print('--')
         user_question = input("You: ")
         if user_question.lower() == 'exit':
             print("Chatbot: Goodbye!")
@@ -395,11 +395,11 @@ def chat_bot():
         response, intent_DQN  = chatbot_response(user_question, mapping, dqn, cfgs, num_actions)
         response2, intent_predict_NLU = predict_NLU(rasa_NLU, user_question, mapping, cfgs)
         response3, intent_rule_NLU, confi = rule_policy_NLU(rasa_NLU, user_question)
-        print()
+        print('--')
         print(f"Chatbot_DQN: {response} /// {intent_DQN}")
-        print()
+        print('--')
         print(f"Chatbot_NLU: {response2} /// {intent_predict_NLU}")
-        print()
+        print('--')
         print(f"Policy_NLU_base:{response3} /// {intent_rule_NLU} /// {confi}")
         print("====================================================")
 
