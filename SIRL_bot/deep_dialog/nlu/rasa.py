@@ -19,10 +19,10 @@ class rasa():
          Return: message, intent, confidence
     """
     
-    def __init__(self, params, top_intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file='./deep_dialog/nlu/rasa_config/GStraining.json'):
+    def __init__(self, params, top_intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file='./deep_dialog/nlu/rasa_config/GStraining.json', isTest = False):
         """ Load rasa config from config files and train NLU """
 
-        # do first training
+            # do first training
         self.params = params
         self.top_intents = top_intents
         self.config_file = config_file
@@ -43,12 +43,13 @@ class rasa():
         if training_file != self.temp_training_file:
             shutil.copy(training_file, self.temp_training_file)
 
-        # training
-        self.train()
-        print('Training in rasa done !')
+        if isTest == False:
+            # training
+            self.train()
+            print('Training in rasa done !')
 
-        # init rasa interpreter, which is used for prediction
-        self.interpreter = Interpreter.load(self.model_directory)
+            # init rasa interpreter, which is used for prediction
+            self.interpreter = Interpreter.load(self.model_directory)
 
     def train(self):
         """ Train NLU """

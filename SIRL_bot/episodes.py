@@ -181,7 +181,7 @@ def get_reward_model(utterances, actions, emb_u, emb_a, model, map_action2answer
         x[1,i,:] = np.array(emb_a[i])#[0:embed_size]
  
 
-    pred = model.predict(x, path_to_model = "./learning_scores/trained_model/model_final.ckpt")
+    pred = model.predict(x, path_to_model = "./trained_model/model_final.ckpt")
 
     return pred
 

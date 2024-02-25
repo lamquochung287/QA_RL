@@ -232,7 +232,7 @@ def set_mapping(params):
     df = load_data(params)
     no_intent = "No intent detected"
     
-    df_location = multiple_data_location(params, file_path='training_path', file_type='training_file')
+    df_location = multiple_data_location(params, file_path='training_path_chapter05', file_type='training_file')
     training_dict = read_multiple_files(df_location, 'json')
     
     df_location = multiple_data_location(params, file_path='intent_response_path',file_type='intent_response_file')
@@ -282,7 +282,7 @@ def chatbot_response(user_question, mapping, dqn, cfgs, num_actions):  # sourcer
 #     return "I have no idea", index_action
 
 def read_dqn_model():
-    file_paths = [f'./models/20240219/agt_{i}.p' for i in range(9) if Path(f'./models/20240219/agt_{i}.p').is_file()]
+    file_paths = [f'./models/20240222_H_chuong05_3.8h/agt_{i}.p' for i in range(9) if Path(f'./models/20240222_H_chuong05_3.8h/agt_{i}.p').is_file()]
     model_params_list = [load_trained_DQN(file_path) for file_path in file_paths]
     merged_params = {
         key: np.mean(np.array([model_params[key] for model_params in model_params_list]), axis=0)
@@ -306,7 +306,7 @@ def config():
         'epsilon_decay': 0.5,
         'cl_threshold': 0.15,
         'no_intent': "Hello, have a nice day!",
-        'rasa_model_path': './projects/default/nlu_20240218-113234_checkpoint_13h',
+        'rasa_model_path': './projects/default/nlu_20240222-192612_H_chuong05_3.8h',
     }
     
     return cfgs
@@ -317,56 +317,57 @@ def parameters():
     config = {
         'data_path': './data/main',
         'data_file': [
-            'chapter01.csv',
-            'chapter02.csv',
-            'chapter03.csv',
-            'chapter04.csv',
+            # 'chapter01.csv',
+            # 'chapter02.csv',
+            # 'chapter03.csv',
+            # 'chapter04.csv',
             'chapter05.csv',
-            'chapter06.csv',
-            'chapter07.csv',
-            'chapter08.csv',
-            'chapter09.csv',
+            # 'chapter06.csv',
+            # 'chapter07.csv',
+            # 'chapter08.csv',
+            # 'chapter09.csv',
         ],
         'training_path': './data/training',
         'training_path_test1': './data/training/test_1',
         'training_path_part1': './data/training/part_1',
         'training_path_part2': './data/training/part_2',
         'training_path_part3': './data/training/part_3',
+        'training_path_chapter05': './data/training/chapter05',
         'training_file': [
-            'chapter01_data_training.json',
-            'chapter02_data_training.json',
-            'chapter03_data_training.json',
-            'chapter04_data_training.json',
+            # 'chapter01_data_training.json',
+            # 'chapter02_data_training.json',
+            # 'chapter03_data_training.json',
+            # 'chapter04_data_training.json',
             'chapter05_data_training.json',
-            'chapter06_data_training.json',
-            'chapter07_data_training.json',
-            'chapter08_data_training.json',
-            'chapter09_data_training.json',
+            # 'chapter06_data_training.json',
+            # 'chapter07_data_training.json',
+            # 'chapter08_data_training.json',
+            # 'chapter09_data_training.json',
         ],
         'intent_response_path': './data/intent_response',
         'intent_response_file': [
-            'chapter01_intent_response.csv',
-            'chapter02_intent_response.csv',
-            'chapter03_intent_response.csv',
-            'chapter04_intent_response.csv',
+            # 'chapter01_intent_response.csv',
+            # 'chapter02_intent_response.csv',
+            # 'chapter03_intent_response.csv',
+            # 'chapter04_intent_response.csv',
             'chapter05_intent_response.csv',
-            'chapter06_intent_response.csv',
-            'chapter07_intent_response.csv',
-            'chapter08_intent_response.csv',
-            'chapter09_intent_response.csv',
+            # 'chapter06_intent_response.csv',
+            # 'chapter07_intent_response.csv',
+            # 'chapter08_intent_response.csv',
+            # 'chapter09_intent_response.csv',
         ],
-        'test_path': './data/test',
-        'test_file': [
-            'chapter01_test_set.csv',
-            'chapter02_test_set.csv',
-            'chapter03_test_set.csv',
-            'chapter04_test_set.csv',
-            'chapter05_test_set.csv',
-            'chapter06_test_set.csv',
-            'chapter07_test_set.csv',
-            'chapter08_test_set.csv',
-            'chapter09_test_set.csv',
-        ],
+        # 'test_path': './data/test',
+        # 'test_file': [
+        #     # 'chapter01_test_set.csv',
+        #     # 'chapter02_test_set.csv',
+        #     # 'chapter03_test_set.csv',
+        #     # 'chapter04_test_set.csv',
+        #     'chapter05_test_set.csv',
+        #     # 'chapter06_test_set.csv',
+        #     # 'chapter07_test_set.csv',
+        #     # 'chapter08_test_set.csv',
+        #     # 'chapter09_test_set.csv',
+        # ],
     }
 
     return config
