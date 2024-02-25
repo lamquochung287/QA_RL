@@ -1,0 +1,83 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Các thành viên gia đình có quyền, nghĩa vụ gì đối với nhau?",
+        "intent": "06_103_1"
+      },
+      {
+        "text": "Quyền và nghĩa vụ của các thành viên trong gia đình là gì?",
+        "intent": "06_103_1"
+      },
+      {
+        "text": "Trong trường hợp sống chung, thành viên gia đình có nghĩa vụ gì?",
+        "intent": "06_103_2"
+      },
+      {
+        "text": "Khi sống chung với nhau các thành viên trong già đình có quyền và nghĩa vụ gì?",
+        "intent": "06_103_2"
+      },
+      {
+        "text": "Sống chung với anh chị và ba mẹ cần thực hiện quyền nghĩa vụ gì không?",
+        "intent": "06_103_2"
+      },
+      {
+        "text": "Nhà nước có chính sách gì đối với quan hệ trong gia đình?",
+        "intent": "06_103_3"
+      },
+      {
+        "text": "Có chính sách gì liên quan đến các thành viên gia đình không?",
+        "intent": "06_103_3"
+      },
+      {
+        "text": "Ông bà nội, ông bà ngoại có quyền, nghĩa vụ gì đối với cháu?",
+        "intent": "06_104_1"
+      },
+      {
+        "text": "Quyền và nghĩa vụ của ông bà với cháu là gì?",
+        "intent": "06_104_1"
+      },
+      {
+        "text": "Ông bà có phải chăm sóc cho cháu không?",
+        "intent": "06_104_1"
+      },
+      {
+        "text": "Cháu có nghĩa vụ gì đối với ông bà nội, ông bà ngoại?",
+        "intent": "06_104_2"
+      },
+      {
+        "text": "Người cháu có phải thực hiện quyền nghĩa vụ gì với ông bà không?",
+        "intent": "06_104_2"
+      },
+      {
+        "text": "Cháu đã đi làm có phải nuôi dưỡng ông bà không?",
+        "intent": "06_104_2"
+      },
+      {
+        "text": "Anh, chị, em có quyền, nghĩa vụ gì đối với nhau?",
+        "intent": "06_105"
+      },
+      {
+        "text": "Quyền và nghĩa vụ của anh, chị, em là gì?",
+        "intent": "06_105"
+      },
+      {
+        "text": "Anh chị em trong gia đình có phải nuôi dưỡng nhau không?",
+        "intent": "06_105"
+      },
+      {
+        "text": "Cô, dì, chú, cậu, bác ruột và cháu ruột có quyền, nghĩa vụ gì đối với nhau?",
+        "intent": "06_106"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}

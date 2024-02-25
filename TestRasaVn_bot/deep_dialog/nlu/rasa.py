@@ -6,7 +6,8 @@ import json
 import time
 import os
 import shutil
-
+from utils import read_multiple_files
+from utils import multiple_data_location
 
 class rasa():
     """ 
@@ -16,39 +17,45 @@ class rasa():
     Methods:
     train(): train NLU with training set given in congif file
     predict(utterance): predict NLU response
-         Return: message, intent, confidence
+        Return: message, intent, confidence
     """
     
-    def __init__(self, params, top_intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", training_file='./data_chapter04_Datatraining.json'):
+    def __init__(self, params, intents, config_file="./deep_dialog/nlu//rasa_config/tensorflow_config.yml", isTest = False):
         """ Load rasa config from config files and train NLU """
 
-        # do first training
-        self.params = params
-        self.top_intents = top_intents
-        self.config_file = config_file
+        
+        if isTest == False:
+            # do first training
+            self.params = params
+            self.intents = intents
+            self.config_file = config_file
 
-        self.no_intent = 'No intent detected'
-        self.cl_threshold = 0.1
+            self.no_intent = 'No intent detected'
+            self.cl_threshold = 0.1
 
         # initial training data
-        with open(training_file, 'r', encoding='utf-8') as f:
-            self.training_dict = json.load(f)
+        # with open(training_file, 'r', encoding='utf-8') as f:
+        #     self.training_dict = json.load(f)
+            df_location = multiple_data_location(params, file_path='training_path_part1', file_type='training_file')
+            self.training_dict = read_multiple_files(df_location, 'json')
 
-        training_data_init = load_data(training_file)
-        self.training_dir = os.path.dirname(training_file)
+            training_data_init = load_data(params['training_path_part1'])
+            self.training_dir = params['training_path_part1']
 
-        self.training_data = training_data_init
-        self.temp_training_file = self.training_dir + '/data_chapter04_Datatraining_tmp.json'
-        self.training_file = training_file
-        if training_file != self.temp_training_file:
-            shutil.copy(training_file, self.temp_training_file)
+            self.training_data = training_data_init
+            # self.temp_training_file = self.training_dir + '/all_chapter_Datatraining_tmp.json'
+            # print('Training temp directory: ', self.temp_training_file)
+            # self.training_file = df_location
+            # for training_location in self.training_file:           
+            #     if training_location != self.temp_training_file:
+            #         shutil.copy(self.training_file, self.temp_training_file)
 
-        # training
-        self.train()
-        print('Training in rasa done !')
+            # training
+            self.train()
+            print('Training in rasa done !')
 
-        # init rasa interpreter, which is used for prediction
-        self.interpreter = Interpreter.load(self.model_directory)
+            # init rasa interpreter, which is used for prediction
+            self.interpreter = Interpreter.load(self.model_directory)
 
     def train(self):
         """ Train NLU """
@@ -77,25 +84,30 @@ class rasa():
         return message, intent, confidence 
 
     def add_utterance(self, utterance, intent, save_json = True):
+        print('--------------------------------')
+        print()
+        print("error when triggering add_utterance, pls create tmp file")
+        print()
+        print('--------------------------------')
+        # examples = self.training_dict['rasa_nlu_data']['common_examples']
 
-        examples = self.training_dict['rasa_nlu_data']['common_examples']
+        # examples.append(self.make_ex_dict(utterance, intent))
 
-        examples.append(self.make_ex_dict(utterance, intent))
+        # self.training_dict['common_examples'] = examples
 
-        self.training_dict['common_examples'] = examples
+        # training_dict = {}
+        # training_dict['common_examples'] = examples
+        # training_dict['entity_synonyms'] = self.training_dict['rasa_nlu_data']['entity_synonyms']
 
-        training_dict = {}
-        training_dict['common_examples'] = examples
-        training_dict['entity_synonyms'] = self.training_dict['rasa_nlu_data']['entity_synonyms']
+        # data = {
+        #     "rasa_nlu_data": training_dict
+        # }
 
-        data = {
-            "rasa_nlu_data": training_dict
-        }
-
-        if save_json:
-            with open(self.temp_training_file, 'w') as fp:
-                json.dump(data, fp, indent=2)
-                #print('Training set written to %s' % self.temp_training_file)
+        # if save_json:
+        #     with open(self.temp_training_file, 'w') as fp:
+        #         json.dump(data, fp, indent=2)
+        #         print('Training set written to %s' % self.temp_training_file)
+        return
 
     def make_ex_dict(self,utterance, intent):
 
@@ -115,11 +127,14 @@ class rasa():
         map_action2index = {}
 
         data = self.training_dict
-        example_list = data["rasa_nlu_data"]["common_examples"]
+        # example_list = data["rasa_nlu_data"]["common_examples"]
+        example_list=[]
+        for i in range(len(data)):
+            example_list.extend(data[i]["rasa_nlu_data"]["common_examples"])
 
         # I take only intents in intent_list
-        #if self.top_intents:
-        #    example_list = list(set(example_list) & set(self.top_intents))
+        #if self.intents:
+        #    example_list = list(set(example_list) & set(self.intents))
         intent_list = [item['intent'] for item in example_list]
         u_intent_list = list(set(intent_list))
 
@@ -135,4 +150,5 @@ class rasa():
             map_index2action[count] = action
             count += 1
 
+        print('total intent count', count)
         return map_index2action, map_action2index

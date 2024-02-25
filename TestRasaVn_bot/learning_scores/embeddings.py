@@ -2,8 +2,7 @@ import numpy as np
 import nltk
 # nltk.download('stopwords')
 # from nltk.corpus import stopwords 
-# from nltk.tokenize import RegexpTokenizer
-# from underthesea import stopwords
+from nltk.tokenize import RegexpTokenizer
 from underthesea import word_tokenize
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -26,8 +25,14 @@ class embeddings(object):
         extend_vocab: boolean, useful only for gloves
         embed_par: str (either "gloves" or "tf")
         """
- 
-        # self.STOP = set(stopwords.words('vi'))
+
+        # file_path = 'stopwords_underthesea.txt'
+        # stopwords = []
+        # with open(file_path, 'r', encoding='utf-8') as file:
+            # stopwords = file.read().splitlines()
+
+
+        # self.STOP = set(stopwords)
         self.embed_par = embed_par
         self.extend_vocab = extend_vocab
 
@@ -69,23 +74,23 @@ class embeddings(object):
         self.vocab_size = len(words_to_index)
 
     def _tokenizer(self, text, special_chars=['<br']):
-           """ tokenize text and remove stopwords """
-        
-        #    #Step 1: remove special chars
-        #    for spch in special_chars:
-        #        text = text.replace(spch,'')
+        """ tokenize text and remove stopwords """
+    
+        #Step 1: remove special chars
+        for spch in special_chars:
+            text = text.replace(spch,'')
 
-        #    # Step 2: tokenize text inot list of low case tokens
-        # #    tokenizer = RegexpTokenizer(r'\w+')
-        #    tokenizer = word_tokenize
-        #    tokens = tokenizer.tokenize(text.lower())
+        # Step 2: tokenize text inot list of low case tokens
+        tokenizer = RegexpTokenizer(r'\w+')
+        # tokenizer = word_tokenize
+        tokens = tokenizer.tokenize(text.lower())
 
-        #    # Step 3 : TODO : stemming
+        # Step 3 : TODO : stemming
 
-        #    # Step 4: remove stopwords
-        #    words = np.array([w for w in tokens if w not in self.STOP]) #tokens without stopwords
+        # Step 4: remove stopwords
+        words = np.array([w for w in tokens if w not in self.STOP]) #tokens without stopwords
 
-        #    return words
+        return words
 
     def _BoW(self, words, wei=None):
 
@@ -176,36 +181,41 @@ def increase_vocab(words_to_index, index_to_words, word_to_vec_map, project):
 
     """ increase vocabulary by splitting acronyms. Useful only for gloves. The acronyms splitting is  corpus-specific and might be changed """
 
-    # size_vocab = len(words_to_index)
+    size_vocab = len(words_to_index)
 
-    # # STOP = set(stopwords.words('vi'))
+    # file_path = 'stopwords_underthesea.txt'
+    # stopwords = []
+    # with open(file_path, 'r', encoding='utf-8') as file:
+    #     stopwords = file.read().splitlines()
 
-    # new_vocab = []
-    # s = size_vocab
-    # for sentence in project:
+    # STOP = set(stopwords)
 
-    #     words = (sentence.lower()).split()
+    new_vocab = []
+    s = size_vocab
+    for sentence in project:
 
-    #     sentence = sentence.replace('ffwd','fast forward')
-    #     sentence = sentence.replace('FFWD','fast forward')
-    #     sentence = sentence.replace("KPI", "key performance metric")
-    #     sentence = sentence.replace("KPIs", "key performance metric")
-    #     sentence = sentence.replace('omnichannel','omni channel')
-    #     # tokenizer = RegexpTokenizer(r'\w+')
-    #     tokenizer = word_tokenize
-    #     tokens = tokenizer.tokenize(sentence.lower())
-    #     words = [w for w in tokens if w not in STOP]
+        words = (sentence.lower()).split()
+
+        sentence = sentence.replace('ffwd','fast forward')
+        sentence = sentence.replace('FFWD','fast forward')
+        sentence = sentence.replace("KPI", "key performance metric")
+        sentence = sentence.replace("KPIs", "key performance metric")
+        sentence = sentence.replace('omnichannel','omni channel')
+        # tokenizer = RegexpTokenizer(r'\w+')
+        tokenizer = word_tokenize
+        tokens = tokenizer.tokenize(sentence.lower())
+        words = [w for w in tokens if w not in STOP]
 
 
-    #     for w in words:
-    #         new_vocab.append(w)
-    #         if w not in word_to_vec_map:
+        for w in words:
+            new_vocab.append(w)
+            if w not in word_to_vec_map:
 
-    #             words_to_index[w] = s
-    #             index_to_words[s] = w
-    #             ran = np.random.rand(50)
-    #             ran = ran*2-1
-    #             word_to_vec_map[w] = ran
+                words_to_index[w] = s
+                index_to_words[s] = w
+                ran = np.random.rand(50)
+                ran = ran*2-1
+                word_to_vec_map[w] = ran
                 
 
-    # return words_to_index, index_to_words, word_to_vec_map, new_vocab
+    return words_to_index, index_to_words, word_to_vec_map, new_vocab

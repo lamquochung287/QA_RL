@@ -1,14 +1,18 @@
 import pandas as pd
 import numpy as np
+from utils import multiple_data_location
+from utils import read_multiple_files
 
 
 class evaluate(object):
     """ evaluate RL performances on test set extracted from the full conversations and manually labeled """
     
-    def __init__(self, map_state2index, map_index2action, file='data_chapter04_test_set.csv'):
+    def __init__(self, params, map_state2index, map_index2action, file='data_chapter04_test_set.csv'):
         """ read test set """
         
-        DF = pd.read_csv(file)
+        # DF = pd.read_csv(file)
+        df_location = multiple_data_location(params, file_path='test_path', file_type='test_file')
+        DF = read_multiple_files(df_location)
         
         self.utt_test = list(DF['question'])
         self.gold_resp = list(DF['gold_intent'])
@@ -44,7 +48,7 @@ class evaluate(object):
                     print('gold_intent:', gold)
                     print('success:', success)
 
- 
+
         print('#### End of evaluation #######')
         success_rate =  float(success)/float(num_utt)       
         print('Success Rate:', success_rate, success, num_utt)

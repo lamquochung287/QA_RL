@@ -6,22 +6,23 @@ import pandas as pd
 
 class DQN:
 
-    def __init__(self, input_size, hidden_size, output_size):
+    def __init__(self, input_size, hidden_size, output_size, isTest = False):
         self.model = {}
         
+        if isTest == False:
         # input-hidden
-        self.model['Wxh'] = initWeight(input_size, hidden_size)
-        self.model['bxh'] = np.zeros((1, hidden_size))
+            self.model['Wxh'] = initWeight(input_size, hidden_size)
+            self.model['bxh'] = np.zeros((1, hidden_size))
 
-        # hidden-output
-        #self.model['Wd'] = initWeight(hidden_size, output_size)*0.1 
-        self.model['Wd'] = initWeight(hidden_size, output_size) 
-        self.model['bd'] = np.zeros((1, output_size))
+            # hidden-output
+            #self.model['Wd'] = initWeight(hidden_size, output_size)*0.1 
+            self.model['Wd'] = initWeight(hidden_size, output_size) 
+            self.model['bd'] = np.zeros((1, output_size))
 
-        self.update = ['Wxh', 'bxh', 'Wd', 'bd']
-        self.regularize = ['Wxh', 'Wd']
+            self.update = ['Wxh', 'bxh', 'Wd', 'bd']
+            self.regularize = ['Wxh', 'Wd']
 
-        self.step_cache = {}
+            self.step_cache = {}
 
         #f = open('cost.dat', 'w')
         #f.close()

@@ -13,28 +13,29 @@ pipeline:
   - name: "WhitespaceTokenizer"
   - name: "RegexFeaturizer"
   - name: "LexicalSyntacticFeaturizer"
-    "features": [
-      ["low", "title", "upper"],
-      ["BOS", "EOS", "low", "upper", "title", "digit"],
-      ["low", "title", "upper"],
-    ]
-    "prefix_suffix_case_sensitive": True
+    # "features": [
+    #   ["low", "title", "upper"],
+    #   ["BOS", "EOS", "low", "upper", "title", "digit"],
+    #   ["low", "title", "upper"],
+    # ]
+    # "prefix_suffix_case_sensitive": True
   - name: "CountVectorsFeaturizer"
     # Analyzer to use, either 'word', 'char', or 'char_wb'
-    "analyzer": "word"
-    # Set the lower and upper boundaries for the n-grams
-    "min_ngram": 1
-    "max_ngram": 1
-    "use_shared_vocab": False
-  # - name: "LanguageModelFeaturizer"
-  #   model_name: "bert"
-  #   model_weights: "rasa/LaBSE"
+    # "analyzer": "word"
+    # # Set the lower and upper boundaries for the n-grams
+    # "min_ngram": 1
+    # "max_ngram": 1
+    # "use_shared_vocab": False
+  - name: "LanguageModelFeaturizer"
+    model_name: "bert"
+    model_weights: "rasa/LaBSE"
   - name: "DIETClassifier"
     epochs: 100
-    embedding_dimension: 10
-    constrain_similarities: true
+    # embedding_dimension: 50
+    entity_recognition: False
+    constrain_similarities: True
     model_confidence: "softmax"
-  - name: "EntitySynonymMapper"
-  - name: "ResponseSelector"
-    evaluate_every_number_of_epochs: 10
-    constrain_similarities: true
+  # - name: "EntitySynonymMapper"
+  # - name: "ResponseSelector"
+  #   evaluate_every_number_of_epochs: 10
+  #   constrain_similarities: True

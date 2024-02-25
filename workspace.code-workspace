@@ -1,10 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "SIRL_bot"
+			"name": "TestRasaVn_bot",
+			"path": "TestRasaVn_bot"
 		},
 		{
-			"path": "TestRasaVn_bot"
+			"name": "SIRL_bot",
+			"path": "SIRL_bot"
 		}
 	]
 }

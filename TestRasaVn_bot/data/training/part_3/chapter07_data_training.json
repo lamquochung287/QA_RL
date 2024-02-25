@@ -1,0 +1,255 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Nghĩa vụ cấp dưỡng được thực hiện giữa những đối tượng nào?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Ai cần thực hiện nghĩa vụ cấp dưỡng?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Có thể nhờ người khác thực hiện nghĩa vụ cấp dưỡng thay cho mình được không?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Yêu cầu thay thế việc cấp dưỡng bằng nghĩa vụ khác được không?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Anh em trong gia đình có phải cấp dưỡng cho nhau được không?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Vợ chồng có phải chu cấp cho nhau không?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Nghĩa vụ cấp dưỡng có thể thay thế bằng nghĩa vụ khác không?",
+        "intent": "07_107_1"
+      },
+      {
+        "text": "Trong trường hợp người có nghĩa vụ nuôi dưỡng trốn tránh nghĩa vụ, thì có biện pháp xử lý gì?",
+        "intent": "07_107_2"
+      },
+      {
+        "text": "Con đã thành niên nhưng không thực hiện việc nuôi dưỡng cha mẹ có sao không?",
+        "intent": "07_107_2"
+      },
+      {
+        "text": "Cháu không muốn thực hiện việc phụng dưỡng ông bà trong gia đình được không?",
+        "intent": "07_107_2"
+      },
+      {
+        "text": "Trong trường hợp một người có nghĩa vụ cấp dưỡng cho nhiều người, thì người cấp dưỡng và những người được cấp dưỡng thỏa thuận về gì?",
+        "intent": "07_108"
+      },
+      {
+        "text": "Một người có thể cấp dưỡng cho nhiều không?",
+        "intent": "07_108"
+      },
+      {
+        "text": "Con không thể thỏa thuận được mức cấp dưỡng được hết cho cha mẹ ông bà làm sao?",
+        "intent": "07_108"
+      },
+      {
+        "text": "Trong trường hợp nhiều người cùng có nghĩa vụ cấp dưỡng cho một người hoặc cho nhiều người, những người này thỏa thuận về điều gì?",
+        "intent": "07_109"
+      },
+      {
+        "text": "Gia đình có nhiều con thì cấp dưỡng cho cha mẹ như thế nào?",
+        "intent": "07_109"
+      },
+      {
+        "text": "Các con trong gia đình không thống nhất được việc cấp dưỡng cho cha mẹ giải quyết như thế nào?",
+        "intent": "07_109"
+      },
+      {
+        "text": "Cha, mẹ có nghĩa vụ cấp dưỡng trong trường hợp nào đối với con?",
+        "intent": "07_110"
+      },
+      {
+        "text": "Con đã thành niên vẫn được hưởng chu cấp từ cha mẹ không?",
+        "intent": "07_110"
+      },
+      {
+        "text": "Cha mẹ có phải chu cấp cho con không?",
+        "intent": "07_110"
+      },
+      {
+        "text": "Con chưa đủ tuổi thì có được cha mẹ chu cấp không?",
+        "intent": "07_110"
+      },
+      {
+        "text": "Con đã thành niên không sống chung với cha, mẹ có nghĩa vụ gì đối với cha, mẹ?",
+        "intent": "07_111"
+      },
+      {
+        "text": "Con đi làm ở nước ngoài có phải thực hiện việc chu cấp cho cha mẹ không?",
+        "intent": "07_111"
+      },
+      {
+        "text": "Trong trường hợp không còn cha mẹ hoặc cha mẹ không có khả năng lao động và không có tài sản để cấp dưỡng cho con, anh, chị đã thành niên không sống chung với em có nghĩa vụ gì đối với em?",
+        "intent": "07_112"
+      },
+      {
+        "text": "Em trong gia đình có phải chu cấp cho anh chị không?",
+        "intent": "07_112"
+      },
+      {
+        "text": "Trường hợp cha mẹ mất, ai phải thực hiện cấp dưỡng cho con chưa thành niên.",
+        "intent": "07_112"
+      },
+      {
+        "text": "Anh chị trong gia đình có phải chu cấp cho em khi chưa đến tuổi lao động không?",
+        "intent": "07_112"
+      },
+      {
+        "text": "Ai có nghĩa vụ cấp dưỡng cho cháu theo Điều 113 khi cháu chưa thành niên hoặc đã thành niên nhưng không có khả năng lao động và không có tài sản?",
+        "intent": "_07_113_1"
+      },
+      {
+        "text": "Ông bà có chu cấp con cháu không?",
+        "intent": "_07_113_1"
+      },
+      {
+        "text": "Trường hợp nào ông bà nội cấp dưỡng cho cháu?",
+        "intent": "_07_113_1"
+      },
+      {
+        "text": "Trong trường hợp nào ông bà nội, ông bà ngoại phải cấp dưỡng cho cháu đã thành niên không sống chung với họ?",
+        "intent": "07_113_1"
+      },
+      {
+        "text": "Cháu có phải cấp dưỡng cho ông bà nội không?",
+        "intent": "07_113_2"
+      },
+      {
+        "text": "Khi đi làm cháu có phải cấp dưỡng cho ông bà nội không?",
+        "intent": "07_113_2"
+      },
+      {
+        "text": "Ai có nghĩa vụ cấp dưỡng cho cháu ruột theo Điều 114 khi cháu chưa thành niên hoặc đã thành niên nhưng không có khả năng lao động và không có tài sản?",
+        "intent": "07_114_1"
+      },
+      {
+        "text": "Khi ba mẹ mất con chưa có khả năng lao động thì họ hàng có phải nuôi dưỡng giúp đỡ không?",
+        "intent": "07_114_1"
+      },
+      {
+        "text": "Cháu ruột có được họ hàng chu cấp hay không?",
+        "intent": "07_114_1"
+      },
+      {
+        "text": "Trong trường hợp nào cháu ruột phải cấp dưỡng cho cô, dì, chú, cậu, bác ruột khi cháu đã thành niên và không sống chung với họ?",
+        "intent": "07_114_2"
+      },
+      {
+        "text": "Cháu có phải cấp dưỡng cho họ hàng không?",
+        "intent": "07_114_2"
+      },
+      {
+        "text": "Khi đi làm cháu có phải cấp dưỡng cho cô ruột không?",
+        "intent": "07_114_2"
+      },
+      {
+        "text": "Khi ly hôn, khi nào bên khó khăn, túng thiếu có quyền yêu cầu cấp dưỡng?",
+        "intent": "07_115"
+      },
+      {
+        "text": "Vợ chồng sau khi ly hôn có phải chu cấp cho nhau không?",
+        "intent": "07_115"
+      },
+      {
+        "text": "Sau khi ly hôn, chồng gặp khó khăn có thể chu cấp cho chồng không?",
+        "intent": "07_115"
+      },
+      {
+        "text": "Ai có nghĩa vụ cấp dưỡng khi ly hôn nếu bên kia có yêu cầu có lý do chính đáng?",
+        "intent": "07_115"
+      },
+      {
+        "text": "Làm thế nào mức cấp dưỡng được xác định?",
+        "intent": "07_116_1"
+      },
+      {
+        "text": "Xác định mức cấp dưỡng thế nào?",
+        "intent": "07_116_1"
+      },
+      {
+        "text": "Khi không thỏa thuận được mức cấp dưỡng có thể yêu cầu cơ quan chức năng giải quyết không?",
+        "intent": "07_116_1"
+      },
+      {
+        "text": "Khi có lý do chính đáng, mức cấp dưỡng có thể thay đổi như thế nào?",
+        "intent": "07_116_2"
+      },
+      {
+        "text": "Có thể thay đổi mức cấp dưỡng không?",
+        "intent": "07_116_2"
+      },
+      {
+        "text": "Không thỏa thuận được mức cấp dưỡng khi quyết định thay đổi?",
+        "intent": "07_116_2"
+      },
+      {
+        "text": "Có những phương thức cấp dưỡng nào được quy định theo Điều 117?",
+        "intent": "07_117"
+      },
+      {
+        "text": "Bao lâu mới chu cấp một lần?",
+        "intent": "07_117"
+      },
+      {
+        "text": "Con không thể thực hiện cấp dưỡng do không đủ kinh tế có sao không?",
+        "intent": "07_117"
+      },
+      {
+        "text": "Các bên có thể thỏa thuận thay đổi phương thức cấp dưỡng trong trường hợp nào?",
+        "intent": "07_117"
+      },
+      {
+        "text": "Khi nào nghĩa vụ cấp dưỡng chấm dứt theo Điều 118?",
+        "intent": "07_118"
+      },
+      {
+        "text": "Trường hợp cháu mất cha mẹ và được người khác nhận nuôi họ hàng có cần thực hiện cấp dưỡng tiếp không?",
+        "intent": "07_118"
+      },
+      {
+        "text": "Vợ cũ kết hôn thì chồng cũ có tiếp tục thực hiện chu cấp không?",
+        "intent": "07_118"
+      },
+      {
+        "text": "Khi ông bà mất con cháu có phải thực hiện chu cấp tiếp không?",
+        "intent": "07_118"
+      },
+      {
+        "text": "Ai có quyền yêu cầu thực hiện nghĩa vụ cấp dưỡng theo Điều 119?",
+        "intent": "07_119"
+      },
+      {
+        "text": "Tôi có thể yêu cầu con cháu thực hiện việc chu cấp ở cơ quan nào?",
+        "intent": "07_119"
+      },
+      {
+        "text": "Phát hiện con trốn thực hiện nghĩa vụ cấp dưỡng phải báo cáo lên đâu?",
+        "intent": "07_119"
+      },
+      {
+        "text": "Theo Điều 120, ai được khuyến khích trợ giúp bằng tiền hoặc tài sản khác?",
+        "intent": "07_120"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}

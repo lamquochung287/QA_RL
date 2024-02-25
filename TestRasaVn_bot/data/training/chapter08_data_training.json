@@ -1,0 +1,183 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+       "text": "Theo Chương VIII, Quan hệ hôn nhân và gia đình có yếu tố nước ngoài được tôn trọng như thế nào tại Việt Nam?",
+       "intent": "08_121_1"
+      },
+      {
+       "text": "Kết hôn với người nước ngoài có pháp luật nước ta công nhận không?",
+       "intent": "08_121_1"
+      },
+      {
+       "text": "Người nước ngoài tại Việt Nam trong quan hệ hôn nhân và gia đình có quyền, nghĩa vụ như thế nào?",
+       "intent": "08_121_2"
+      },
+      {
+       "text": "Khi kết hôn với người nước ngoài, thì quyền và nghĩa vụ của họ có được công nhận không?",
+       "intent": "08_121_2"
+      },
+      {
+       "text": "Người nước ngoài khi kết hôn với người Việt thì có nghĩa vụ và quyền gì?",
+       "intent": "08_121_2"
+      },
+      {
+       "text": "Nhà nước Việt Nam bảo hộ quyền, lợi ích hợp pháp của công dân Việt Nam ở nước ngoài trong quan hệ hôn nhân và gia đình như thế nào?",
+       "intent": "08_121_3"
+      },
+      {
+       "text": "Chồng là người nước ngoài kết hôn với vợ Việt thì quyền và lợi ích của vợ khi ở nước ngoài như thế nào?",
+       "intent": "08_121_3"
+      },
+      {
+       "text": "Khi kết hôn với người nước ngoài thì người Việt có được bảo vệ phong tục tập quán không?",
+       "intent": "08_121_3"
+      },
+      {
+       "text": "Chính phủ có quy định chi tiết gì về việc giải quyết quan hệ hôn nhân và gia đình có yếu tố nước ngoài?",
+       "intent": "08_121_4"
+      },
+      {
+       "text": "Pháp luật nào áp dụng đối với quan hệ hôn nhân và gia đình có yếu tố nước ngoài?",
+       "intent": "08_122_1"
+      },
+      {
+       "text": "Luật Hôn nhân và gia đình có áp dụng khi kết hôn với người nước ngoài không?",
+       "intent": "08_122_1"
+      },
+      {
+       "text": "Khi người Việt và người nước ngoài kết hôn, luật nước ta có áp dụng được không?",
+       "intent": "08_122_1"
+      },
+      {
+       "text": "Khi có dẫn chiếu từ các văn bản pháp luật khác của Việt Nam về việc áp dụng pháp luật nước ngoài, thì áp dụng pháp luật nước ngoài như thế nào?",
+       "intent": "08_122_2"
+      },
+      {
+       "text": "Khi có dẫn chiếu từ điều ước quốc tế mà Việt Nam là thành viên về việc áp dụng pháp luật nước ngoài, thì áp dụng pháp luật nước ngoài như thế nào?",
+       "intent": "08_123_1"
+      },
+      {
+       "text": "Đăng kí hộ tịch khi kết hôn với người nước ngoài thực hiện theo quy định nào?",
+       "intent": "08_123_1"
+      },
+      {
+       "text": "Thẩm quyền đăng ký hộ tịch liên quan đến quan hệ hôn nhân và gia đình có yếu tố nước ngoài được thực hiện như thế nào?",
+       "intent": "08_123_1"
+      },
+      {
+       "text": "Thẩm quyền giải quyết các vụ việc hôn nhân và gia đình có yếu tố nước ngoài tại Tòa án được thực hiện như thế nào?",
+       "intent": "08_123_2"
+      },
+      {
+       "text": "Tòa án có giải quyết hôn nhân Việt và Mỹ được không?",
+       "intent": "08_123_2"
+      },
+      {
+       "text": "Tòa án nhân dân cấp huyện có thẩm quyền giải quyết những vụ việc nào liên quan đến hôn nhân và gia đình có yếu tố nước ngoài?",
+       "intent": "08_123_3"
+      },
+      {
+       "text": "Tòa án nhân dân cấp huyện có thẩm quyền giải quyết những vấn đề nào về hôn nhân và gia đình?",
+       "intent": "08_123_3"
+      },
+      {
+       "text": "Khi sử dụng giấy tờ về hôn nhân và gia đình do cơ quan nước ngoài lập, cấp hoặc xác nhận, giấy tờ đó cần phải được làm gì?",
+       "intent": "08_124"
+      },
+      {
+       "text": "Giấy tờ cần có những gì trong việc giải quyết các vụ việc hôn nhân và gia đình có thành viên là người nước ngoài?",
+       "intent": "08_124"
+      },
+      {
+       "text": "Khi có vấn đề cần giải quyết các vụ hôn nhân và gia đình liên quan đến nước ngoài, cần chuẩn bị giấy tờ nào?",
+       "intent": "08_124"
+      },
+      {
+       "text": "Việc công nhận bản án, quyết định về hôn nhân và gia đình của Tòa án nước ngoài tại Việt Nam được thực hiện như thế nào?",
+       "intent": "08_125_1"
+      },
+      {
+       "text": "Giải quyết vụ kiện, tranh chấp hôn nhân có chồng là người nước ngoài thì có thực hiện ở Việt Nam được không?",
+       "intent": "08_125_1"
+      },
+      {
+       "text": "Các bản án về hôn nhân của vợ nước ngoài khi thi hành ở Việt Nam thì như thế náo?",
+       "intent": "08_125_1"
+      },
+      {
+       "text": "Chính phủ quy định việc gì liên quan đến bản án, quyết định về hôn nhân và gia đình của Tòa án nước ngoài?",
+       "intent": "08_125_2"
+      },
+      {
+       "text": "Trong việc kết hôn giữa công dân Việt Nam với người nước ngoài, mỗi bên phải tuân theo điều gì?",
+       "intent": "08_126_1"
+      },
+      {
+       "text": "Khi kết hôn giữa người Việt và người nước ngoài phải tuân theo gì?",
+       "intent": "08_126_1"
+      },
+      {
+       "text": "Người nước ngoài tiến hành kết hôn ở cơ quan nhà nước Việt Nam thì cần lưu ý gì?",
+       "intent": "08_126_1"
+      },
+      {
+       "text": "Việc kết hôn giữa những người nước ngoài thường trú ở Việt Nam phải tuân theo điều gì?",
+       "intent": "08_126_2"
+      },
+      {
+       "text": "Kết hôn của người nước ngoài thường trú ở Việt Nam thì tuân theo quy định gì?",
+       "intent": "08_126_2"
+      },
+      {
+       "text": "Việc ly hôn giữa công dân Việt Nam với người nước ngoài, giữa người nước ngoài với nhau thường trú ở Việt Nam được giải quyết ở đâu?",
+       "intent": "08_127_1"
+      },
+      {
+       "text": "Trong trường hợp bên là công dân Việt Nam không thường trú ở Việt Nam vào thời điểm yêu cầu ly hôn, việc giải quyết ly hôn được thực hiện như thế nào?",
+       "intent": "08_127_2"
+      },
+      {
+       "text": "Khi giải quyết tài sản là bất động sản ở nước ngoài khi ly hôn, quy định như thế nào?",
+       "intent": "08_127_3"
+      },
+      {
+       "text": "Ly hôn với chồng người nước ngoài có được chia đôi tài sản theo quy định của luật Việt Nam không?",
+       "intent": "08_127_3"
+      },
+      {
+       "text": "Việc xác định cha, mẹ, con mà không có tranh chấp giữa công dân Việt Nam với người nước ngoài, giữa công dân Việt Nam với nhau mà ít nhất một bên định cư ở nước ngoài, giữa người nước ngoài với nhau mà ít nhất một bên thường trú tại Việt Nam được giải quyết ở đâu?",
+       "intent": "08_128_1"
+      },
+      {
+       "text": "Việc xác định cha, mẹ, con có yếu tố nước ngoài đối với các trường hợp quy định tại luật hôn nhân và gia đình năm 2014 được giải quyết ở đâu?",
+       "intent": "08_128_2"
+      },
+      {
+       "text": "Nghĩa vụ cấp dưỡng tuân theo pháp luật của đâu?",
+       "intent": "08_129_1"
+      },
+      {
+       "text": "Cơ quan có thẩm quyền giải quyết đơn yêu cầu cấp dưỡng của người quy định tại khoản 1 Điều này là cơ quan của đâu?",
+       "intent": "08_129_2"
+      },
+      {
+       "text": "Trong trường hợp có yêu cầu giải quyết việc áp dụng chế độ tài sản của vợ chồng theo thỏa thuận có yếu tố nước ngoài, thì cơ quan nào có thẩm quyền của Việt Nam sẽ giải quyết?",
+       "intent": "08_130"
+      },
+      {
+       "text": "Việc giải quyết hậu quả của việc nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn có yếu tố nước ngoài được thực hiện như thế nào?",
+       "intent": "08_130"
+      }
+     ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}

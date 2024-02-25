@@ -1,0 +1,39 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Quan hệ hôn nhân và gia đình được xác lập trước ngày Luật này có hiệu lực thì áp dụng pháp luật nào để giải quyết?",
+        "intent": "09_131_1"
+      },
+      {
+        "text": "Với vụ việc về hôn nhân và gia đình do Tòa án thụ lý trước ngày Luật này có hiệu lực mà chưa giải quyết, thì áp dụng thủ tục nào?",
+        "intent": "09_131_2"
+      },
+      {
+        "text": "Luật này có áp dụng trong trường hợp nào khi có kháng nghị theo thủ tục giám đốc thẩm, tái thẩm?",
+        "intent": "09_131_3"
+      },
+      {
+        "text": "Luật hôn nhân và gia đình số 22\/2000\/QH10 hết hiệu lực từ khi nào?",
+        "intent": "09_132"
+      },
+      {
+        "text": "Luật hôn nhân và gia đình số 22\/2000\/QH10 khi nào có hiệu lực?",
+        "intent": "09_132"
+      },
+      {
+        "text": "Luật này đã được Quốc hội thông qua vào ngày nào?",
+        "intent": "09_133"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}

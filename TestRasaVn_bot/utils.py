@@ -2,35 +2,89 @@ import pandas as pd
 import random
 import numpy as np
 import copy
+import json
 from learning_scores.embeddings import *
+from pathlib import Path
 
 def parameters():
     """ configuration for RL agent """
     
     config = {}
-    config['log_file'] = 'data_chapter04.csv' #file with conversation
+    
+    config['data_path'] = './data/main'
+    config['data_file'] = [
+        'chapter01.csv','chapter02.csv','chapter03.csv',
+        # 'chapter04.csv','chapter05.csv','chapter06.csv',
+        # 'chapter07.csv','chapter08.csv','chapter09.csv',
+        ]
+    
+    config['training_path'] = './data/training'
+    config['training_path_part1'] = './data/training/part_1'
+    config['training_path_part2'] = './data/training/part_2'
+    config['training_path_part3'] = './data/training/part_3'
+    config['training_file'] = [
+        'chapter01_data_training.json','chapter02_data_training.json','chapter03_data_training.json',
+        # 'chapter04_data_training.json','chapter05_data_training.json','chapter06_data_training.json',
+        # 'chapter07_data_training.json','chapter08_data_training.json','chapter09_data_training.json',
+        ]
+    
+    config['intent_response_path'] = './data/intent_response'
+    config['intent_response_file'] = [
+        'chapter01_intent_response.csv','chapter02_intent_response.csv','chapter03_intent_response.csv',
+        # 'chapter04_intent_response.csv','chapter05_intent_response.csv','chapter06_intent_response.csv',
+        # 'chapter07_intent_response.csv','chapter08_intent_response.csv','chapter09_intent_response.csv',
+        ]
+    
+    config['test_path'] = './data/test'
+    config['test_file'] = [
+        'chapter01_test_set.csv','chapter02_test_set.csv','chapter03_test_set.csv',
+        # 'chapter04_test_set.csv','chapter05_test_set.csv','chapter06_test_set.csv',
+        # 'chapter07_test_set.csv','chapter08_test_set.csv','chapter09_test_set.csv',
+        ]
+    
     config['nlu'] = 'rasa' #either watson or rasa
-    config['num_episodes_warm'] = 50 # should be similar to number of conversations 
-    config['train_freq_warm'] = 50 # if equal to num_episodes_war --> 1 training epoch, which is enough for warmp-up
-    config['num_episodes'] = 50 # total number of episodes 
+    config['num_episodes_warm'] = 10 # should be similar to number of conversations 
+    config['train_freq_warm'] = 10 # if equal to num_episodes_warm --> 1 training epoch, which is enough for warmp-up
+    # config['num_episodes'] = 50 # total number of episodes 
     config['train_freq'] =  10 #30 number of episodes per training epochs
     config['epsilon'] = 0.2 #initial
     config['epsilon_f'] = 0.05 #epsilon after epsilon_epoch_f epochs
     config['epsilon_epoch_f'] = 20  
-    config['dqn_hidden_size'] = 10 #paramter of DQN
+    # config['dqn_hidden_size'] = 64 #paramter of DQN
     config['gamma'] = 0.9 #paramter of DQN 
-    config['prob_no_intent'] = 0.5 #probability of giving 'No intent detected" in random policy
-    config['buffer_size'] = 10000 # max size of experience replay buffer 
+    config['prob_no_intent'] = 0.2 #probability of giving 'No intent detected" in random policy
+    # config['buffer_size'] = 20000 # max size of experience replay buffer 
+    
+    # some config to set special params to save sumary's title file for more detail
+    # structure:
+    #   sumary_timeRunning_numInterOfAgentTrainWarmup_numInterOfAgentDQNTraining_dqnHiddenSize_numOfEpisodes_bufferSize
+    # numInterOfAgentTrainWarmup
+    config['numInterOfAgentTrainWarmup_batchSize'] = 4
+    config['numInterOfAgentTrainWarmup_numBatches'] = 10
+    config['numInterOfAgentTrainWarmup_numIter'] = 10
+    config['numInterOfAgentTrainWarmup_miniBatches'] = False
+    # numInterOfAgentDQNTraining 
+    config['numInterOfAgentDQNTraining_batchSize'] = 10
+    config['numInterOfAgentDQNTraining_numBatches'] = 30
+    config['numInterOfAgentDQNTraining_numIter'] = 20
+    config['numInterOfAgentDQNTraining_miniBatches'] = False
+    # dqnHiddenSize
+    config['dqn_hidden_size'] = 64
+    # numOfEpisodes
+    config['num_episodes'] = 100
+    # bufferSize
+    config['buffer_size'] = 20000
+    
     return config
 
 def config_score_model():
     """ configuration for score model """
     
     params = {}
-    params['epochs'] = 50
+    params['epochs'] = 40 # when do 50 epochs, in epoch 10-20-30-40 have same as loss and train acc, so try 30 is fit
     params['lr'] = 1.e-4
     params['l2_reg'] = 0.1
-    params['print_freq'] = 50
+    params['print_freq'] = 10
 
     return params
 
@@ -43,15 +97,44 @@ def watson_config():
 
     return
 
+def multiple_data_location(params, file_path, file_type):
+    files = []
+    prefix = params[file_path]
+    
+    for fileNames in params[file_type]:
+        path = Path(prefix + '/' + fileNames)
+        file_exists = path.is_file()
+        if file_exists == True: 
+            files.append(prefix + '/' + fileNames)
+    
+    return files
 
-#def load_data(file='GS_logs.csv', max_intents = 7):
+def read_multiple_files(files, suffix='csv'):
+    # df = pd.read_csv(file)
+    _list = []
+    if suffix == 'json':
+        for filename in files:
+            with open(filename, 'r', encoding='utf-8') as f:
+                js = json.load(f)
+                _list.append(js)
+        
+    if suffix == 'csv':
+        dfs = []
+        for filename in files:
+            df = pd.read_csv(filename)
+            dfs.append(df)
+        _list = pd.concat(dfs, ignore_index=True)
+    
+    return _list
+
 def load_data(params, max_intents = 7 ):    
     """ Load dataset with conversation already transformed in conventient format: question, answer, reward, feedback, along with intents counter dict and list of top intents """
 
     print('------------- Loading conversations ---------------')
 
-    file = params['log_file']
-    df = pd.read_csv(file)
+    # file = params['log_file']
+    df_location = multiple_data_location(params, file_path='data_path', file_type='data_file')
+    df = read_multiple_files(df_location)
     
     df.dropna(subset=['reward'], how='all', inplace = True)
     df.dropna(subset=['question'], how='all', inplace = True)
@@ -59,57 +142,57 @@ def load_data(params, max_intents = 7 ):
 
     print('lenght of original DataFrame:', len(df.index))
     
-    df_top_intents, dict_intent, top_intents = get_top_intents(df, max_num_intents = max_intents)
-    print('Size of  top intents dataframe:', len(df_top_intents.index))
+    df_intents, dict_intent, intents = get_intents(df, max_num_intents = max_intents)
+    print('Size of intents dataframe:', len(df_intents.index))
     
     # remove feedback intent, as it does not have answer
-    df_top_intents = df_top_intents[df_top_intents['intent'] != 'Feedback']
+    df_intents = df_intents[df_intents['intent'] != 'Feedback']
 
     print()
     
-    return df_top_intents, dict_intent, top_intents
+    return df_intents, dict_intent, intents
 
-def get_df_feedback(df):
-    """ transform original dataset of covnewrsation into convenient format with feedback """
+# def get_df_feedback(df):
+#     """ transform original dataset of covnewrsation into convenient format with feedback """
     
-    indices = []
-    feedbacks = []
-    count_feedback = 0
+#     indices = []
+#     feedbacks = []
+#     count_feedback = 0
 
-    for index, data in df.iterrows():
+#     for index, data in df.iterrows():
 
-        utt_feedback =['no', 'yes']
-        utt = data['question']
-        intent = data['intent']
-        reward = data['reward']
+#         utt_feedback =['no', 'yes']
+#         utt = data['question']
+#         intent = data['intent']
+#         reward = data['reward']
 
-        utt = utt.lower()
+#         utt = utt.lower()
 
-        indices.append(index)
+#         indices.append(index)
 
-        is_feedback = any([utt.startswith(f) for f in utt_feedback])
+#         is_feedback = any([utt.startswith(f) for f in utt_feedback])
 
-        if intent.lower() == 'feedback':
+#         if intent.lower() == 'feedback':
 
-            feedback = 0 if utt.startswith('yes') else 1
+#             feedback = 0 if utt.startswith('yes') else 1
 
-            feedbacks.append({'question': previous['question'], 'answer': previous['answer'],
-            'feedback':feedback, 'reward':previous['reward'], 'intent':previous['intent']})
+#             feedbacks.append({'question': previous['question'], 'answer': previous['answer'],
+#             'feedback':feedback, 'reward':previous['reward'], 'intent':previous['intent']})
 
-            count_feedback += 1
+#             count_feedback += 1
 
-        previous = data   
+#         previous = data   
 
-    print('Number of feedbacks:', count_feedback)
-    f = [item['feedback'] for item in feedbacks]
-    print('positive:',f.count(0))
-    print('negative:',f.count(1))
+#     print('Number of feedbacks:', count_feedback)
+#     f = [item['feedback'] for item in feedbacks]
+#     print('positive:',f.count(0))
+#     print('negative:',f.count(1))
 
-    return pd.DataFrame(feedbacks)
+#     return pd.DataFrame(feedbacks)
 
 
 
-def get_top_intents(df, max_num_intents = 90, remove_fallback=True):
+def get_intents(df, max_num_intents = 90, remove_fallback=True):
     """ This function selects the max_num_intents intents more frequently triggered by the users and return dataframe with these intents only"""
 
     # df_feedback = get_df_feedback(df)
@@ -132,23 +215,26 @@ def get_top_intents(df, max_num_intents = 90, remove_fallback=True):
 
     count_intent_sorted = np.array(count_intent)[isort]
 
-    top_intents = [dictionary['intent'] for dictionary in count_intent_sorted[0:len(count_intent_sorted)]]
+    intents = [dictionary['intent'] for dictionary in count_intent_sorted]
 
-    print('top_intents:', top_intents)
+    print('intents:', intents)
 
-    if 'No intent detected' in top_intents  and remove_fallback:
-        top_intents.remove('No intent detected')
+    if 'No intent detected' in intents and remove_fallback == True:
+        intents.remove('No intent detected')
 
-    df_top_intents = df.loc[df['intent'].isin(top_intents)]
- 
+    df_intents = df.loc[df['intent'].isin(intents)]
 
-    return df_top_intents, count_intent, top_intents
 
-def score_data(file='./data_chapter04.csv', thre_augm = 0.9):
+    return df_intents, count_intent, intents
+
+def score_data(params, thre_augm = 0.9):
     """ Load and transform (embeddings) data to train score model """
     
     ### Prepare Data for training score_model
-    dialog_short = pd.read_csv(file)
+    # dialog_short = pd.read_csv(file)
+    df_location = multiple_data_location(params, file_path='test_path', file_type='test_file') # will edit test_file later
+    # df_location = multiple_data_location(params, file_path='data_path', file_type='data_file')
+    dialog_short = read_multiple_files(df_location)
 
     scores_inv = np.array(dialog_short['feedback'])
     
@@ -182,7 +268,7 @@ def score_data(file='./data_chapter04.csv', thre_augm = 0.9):
 
         
     EMB = embeddings([], embed_par='tf')
- 
+
     emb_utt = EMB.fit(utt)
     emb_resp = EMB.fit(resp)
 
@@ -225,8 +311,8 @@ class Simulator(object):
             if feedback[i] == 0:
                 utt.append(all_utt[i])
             else:
-                 for k in range(multiply):
-                     utt.append(all_utt[i])
+                for k in range(multiply):
+                    utt.append(all_utt[i])
 
         self.utt = utt             
         self.N = len(self.utt)

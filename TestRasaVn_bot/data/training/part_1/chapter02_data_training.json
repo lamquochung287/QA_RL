@@ -1,0 +1,235 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Nam cần đạt đến tuổi bao nhiêu để kết hôn?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Nữ cần đạt đến tuổi bao nhiêu để kết hôn?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Bao nhiêu tuổi trở lên mới được kết hôn?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Ai có thẩm quyền quyết định việc kết hôn?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Trong hôn nhân, việc kết hôn do bên nào quyết định?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Điều kiện nào làm cho việc kết hôn trở thành hôn nhân giả tạo?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Có cấm kết hôn giữa những người nào?",
+        "intent": "2_8_1"
+      },
+      {
+        "text": "Nhà nước có thừa nhận hôn nhân giữa những người cùng giới tính không?",
+        "intent": "2_8_2"
+      },
+      {
+        "text": "Những người cùng giới tính, khi kết hôn, có được nhà nước công nhận hay không?",
+        "intent": "2_8_2"
+      },
+      {
+        "text": "Việc kết hôn phải được thực hiện như thế nào?",
+        "intent": "2_9_1"
+      },
+      {
+        "text": "Việc kết hôn không được đăng ký sẽ có hiệu quả gì?",
+        "intent": "2_9_1"
+      },
+      {
+        "text": "Khi nào vợ chồng đã ly hôn muốn xác lập lại quan hệ vợ chồng, họ phải thực hiện bước gì?",
+        "intent": "2_9_2"
+      },
+      {
+        "text": "Các bước cần thiết để vợ chồng đã ly hôn xác lập lại mối quan hệ vợ chồng?",
+        "intent": "2_9_2"
+      },
+      {
+        "text": "Ai là cơ quan có thẩm quyền để đăng ký việc kết hôn?",
+        "intent": "2_9_1"
+      },
+      {
+        "text": "Quy định của luật về hộ tịch là gì liên quan đến việc đăng ký kết hôn?",
+        "intent": "2_9_1"
+      },
+      {
+        "text": "Ai có quyền yêu cầu hủy việc kết hôn trái pháp luật?",
+        "intent": "2_10_1"
+      },
+      {
+        "text": "Việc kết hôn trái pháp luật, ai có quyền yêu cầu hủy?",
+        "intent": "2_10_1"
+      },
+      {
+        "text": "Ai có quyền yêu cầu hủy việc kết hôn nếu việc kết hôn vi phạm quy định tại các điểm a, c và d khoản 1 Điều 8 của Luật này?",
+        "intent": "2_10_2"
+      },
+      {
+        "text": "Cơ quan quản lý nhà nước về gia đình có quyền gì liên quan đến việc hủy việc kết hôn trái pháp luật?",
+        "intent": "2_10_2"
+      },
+      {
+        "text": "Cơ quan quản lý nhà nước về trẻ em có quyền gì liên quan đến việc hủy việc kết hôn trái pháp luật?",
+        "intent": "2_10_2"
+      },
+      {
+        "text": "Hội liên hiệp phụ nữ có quyền gì liên quan đến việc hủy việc kết hôn trái pháp luật?",
+        "intent": "2_10_2"
+      },
+      {
+        "text": "Cá nhân, cơ quan, tổ chức khác có quyền gì khi phát hiện việc kết hôn trái pháp luật?",
+        "intent": "2_10_3"
+      },
+      {
+        "text": "Cá nhân, cơ quan, tổ chức khác có quyền gì khi phát hiện việc kết hôn trái pháp luật?",
+        "intent": "2_10_3"
+      },
+      {
+        "text": "Tòa án thực hiện xử lý việc kết hôn trái pháp luật dựa trên quy định của đâu?",
+        "intent": "2_11_1"
+      },
+      {
+        "text": "Khi cả hai bên kết hôn đều có đủ điều kiện kết hôn theo quy định tại Điều 8 của Luật này và yêu cầu công nhận quan hệ hôn nhân, Tòa án sẽ xác nhận quan hệ hôn nhân từ khi nào?",
+        "intent": "2_11_2"
+      },
+      {
+        "text": "Quyết định của Tòa án về việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân được gửi đến những đối tượng nào?",
+        "intent": "2_11_3"
+      },
+      {
+        "text": "Ai là đơn vị chủ trì phối hợp với Viện kiểm sát nhân dân tối cao và Bộ Tư pháp trong quá trình thực hiện việc xử lý kết hôn trái pháp luật?",
+        "intent": "2_11_4"
+      },
+      {
+        "text": "Việc xác nhận quan hệ hôn nhân trong trường hợp cả hai bên kết hôn đều có đủ điều kiện được thực hiện như thế nào?",
+        "intent": "2_11_2"
+      },
+      {
+        "text": "Quyết định của Tòa án về việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân có giá trị pháp lý nào?",
+        "intent": "2_11_3"
+      },
+      {
+        "text": "Cơ quan nào sẽ nhận quyết định của Tòa án liên quan đến việc hủy kết hôn trái pháp luật hoặc công nhận quan hệ hôn nhân?",
+        "intent": "2_11_3"
+      },
+      {
+        "text": "Bộ Tư pháp có vai trò gì trong quá trình thực hiện Điều 11 của Luật này?",
+        "intent": "2_11_4"
+      },
+      {
+        "text": "Hậu quả pháp lý của việc hủy kết hôn trái pháp luật được định rõ như thế nào?",
+        "intent": "2_12_1"
+      },
+      {
+        "text": "Làm thế nào quyền, nghĩa vụ của cha, mẹ, con được giải quyết khi việc kết hôn bị hủy?",
+        "intent": "2_12_2"
+      },
+      {
+        "text": "Những vấn đề như quan hệ tài sản, nghĩa vụ và hợp đồng giữa các bên sẽ được giải quyết như thế nào khi việc kết hôn bị hủy?",
+        "intent": "2_12_3"
+      },
+      {
+        "text": "Theo Điều 12 của Luật, ai có trách nhiệm giải quyết quan hệ tài sản, nghĩa vụ và hợp đồng khi việc kết hôn bị hủy?",
+        "intent": "2_12_3"
+      },
+      {
+        "text": "Khi việc đăng ký kết hôn không đúng thẩm quyền xảy ra, cơ quan nhà nước có thẩm quyền sẽ thực hiện các biện pháp gì?",
+        "intent": "2_13"
+      },
+      {
+        "text": "Quan hệ hôn nhân sẽ được xác lập từ khi nào trong trường hợp đăng ký kết hôn không đúng thẩm quyền?",
+        "intent": "2_13"
+      },
+      {
+        "text": "Theo Điều 13 của Luật, khi có yêu cầu thu hồi, hủy bỏ giấy chứng nhận kết hôn, cơ quan nhà nước có thẩm quyền sẽ đề xuất điều gì cho hai bên?",
+        "intent": "2_13"
+      },
+      {
+        "text": "Theo Điều 14 của Luật, khi nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn, quyền, nghĩa vụ giữa vợ và chồng có phát sinh không?",
+        "intent": "2_14_1"
+      },
+      {
+        "text": "Trong trường hợp nam, nữ thực hiện đăng ký kết hôn sau khi chung sống với nhau như vợ chồng, quan hệ hôn nhân sẽ được xác lập từ thời điểm nào?",
+        "intent": "2_14_2"
+      },
+      {
+        "text": "Theo Điều 14 của Luật, quyền, nghĩa vụ đối với con, tài sản và hợp đồng giữa nam, nữ chung sống như vợ chồng được giải quyết như thế nào?",
+        "intent": "2_14_1"
+      },
+      {
+        "text": "Nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn có phải tuân theo các điều kiện kết hôn quy định tại Điều 8 không?",
+        "intent": "2_11_2"
+      },
+      {
+        "text": "Quan hệ hôn nhân có được công nhận nếu nam, nữ thực hiện việc đăng ký kết hôn sau khi chung sống như vợ chồng?",
+        "intent": "2_14_2"
+      },
+      {
+        "text": "Nam, nữ chung sống như vợ chồng có được công nhận quan hệ hôn nhân theo Điều 14 không?",
+        "intent": "2_14_2"
+      },
+      {
+        "text": "Theo Điều 14 của Luật, việc giải quyết quyền, nghĩa vụ đối với con và tài sản giữa nam, nữ chung sống như vợ chồng được thực hiện theo quy định nào?",
+        "intent": "2_15"
+      },
+      {
+        "text": "Theo Điều 15 của Luật, quyền, nghĩa vụ giữa nam, nữ chung sống với nhau như vợ chồng và con được giải quyết theo quy định nào?",
+        "intent": "2_15"
+      },
+      {
+        "text": "Theo Điều 16 của Luật, quan hệ tài sản, nghĩa vụ và hợp đồng của nam, nữ chung sống với nhau như vợ chồng mà không đăng ký kết hôn được giải quyết như thế nào?",
+        "intent": "2_16_1"
+      },
+      {
+        "text": "Việc giải quyết quan hệ tài sản trong trường hợp nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn bảo đảm điều gì?",
+        "intent": "2_16_2"
+      },
+      {
+        "text": "Nam, nữ chung sống như vợ chồng mà không đăng ký kết hôn có được thỏa thuận giải quyết quan hệ tài sản không?",
+        "intent": "2_16_1"
+      },
+      {
+        "text": "Theo Điều 16 của Luật, quyền, lợi ích hợp pháp của ai phải được bảo đảm khi giải quyết quan hệ tài sản?",
+        "intent": "2_16_2"
+      },
+      {
+        "text": "Quan hệ nội trợ và công việc khác liên quan để duy trì đời sống chung của nam, nữ chung sống như vợ chồng được coi như là gì?",
+        "intent": "2_16_2"
+      },
+      {
+        "text": "Theo Điều 15 của Luật, quyền, nghĩa vụ giữa nam, nữ chung sống với nhau như vợ chồng và con được giải quyết theo quy định nào?",
+        "intent": "2_15"
+      },
+      {
+        "text": "Trong trường hợp nam, nữ không có thỏa thuận giải quyết quan hệ tài sản, quy định pháp luật nào sẽ được áp dụng?",
+        "intent": "2_16_1"
+      },
+      {
+        "text": "Việc giải quyết quan hệ tài sản của nam, nữ chung sống như vợ chồng thực hiện như thế nào nếu không có thỏa thuận?",
+        "intent": "2_16_1"
+      },
+      {
+        "text": "Quyền, lợi ích hợp pháp của ai phải được đảm bảo khi giải quyết quan hệ tài sản của nam, nữ chung sống như vợ chồng?",
+        "intent": "2_16_2"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "",
+        "synonyms": [
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+}
